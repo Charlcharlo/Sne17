@@ -1,11 +1,16 @@
 import "./App.css";
-import LangTest from "./Context/LAngTest";
 import LangProvider from "./Context/LanguageContext";
+import ScrollProvider from "./Context/ScrollContext";
+import Cover from "./Cover/Cover";
+import NavBar from "./NavBar/NavBar";
 
 function App() {
   return (
     <LangProvider>
-      <LangTest />
+      <ScrollProvider>
+        <NavBar />
+        <Cover />
+      </ScrollProvider>
     </LangProvider>
   );
 }

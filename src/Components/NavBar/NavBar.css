@@ -1,0 +1,25 @@
+.nav-bar {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  align-items: center;
+  transition: 300ms;
+  min-height: 0;
+}
+
+.nav-bar.hidden {
+  height: 0;
+  padding: 0 20px;
+}
+
+.nav-bar.shown {
+  height: 60px;
+}
+
+.nav-bar.hidden h1,
+.nav-bar.hidden div {
+  display: none;
+}
