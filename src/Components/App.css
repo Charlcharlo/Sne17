@@ -43,3 +43,9 @@ html {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

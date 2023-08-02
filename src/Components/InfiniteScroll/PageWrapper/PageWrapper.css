@@ -1,0 +1,8 @@
+.page-wrapper {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.page-wrapper > img {
+  max-width: 100%;
+}
