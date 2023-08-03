@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from "react";
+import { placeholder, placeholderZl } from "../../Data/testPages";
+import { useLang } from "../Context/LanguageContext";
 import { useScroll } from "../Context/ScrollContext";
 import BookViewer from "./BookViewer";
 
-export default function InfiniteScroll({ book, coverRef }) {
+export default function InfiniteScroll({ coverRef }) {
   const [current, setCurrent] = useState(1);
+  const [book, setBook] = useState(placeholder);
   const scrollPosition = useScroll();
+  const lang = useLang();
   const firstPageRef = useRef();
 
   const [pages, setPages] = useState([]);
@@ -20,6 +24,10 @@ export default function InfiniteScroll({ book, coverRef }) {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scrollPosition]);
+
+  useEffect(() => {
+    setBook(lang === "zl" ? placeholderZl : placeholder);
+  }, [lang]);
 
   useEffect(() => {
     const array = [];

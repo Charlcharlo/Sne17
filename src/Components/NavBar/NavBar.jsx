@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { useLangSelected } from "../Context/LanguageContext";
 import { useScroll } from "../Context/ScrollContext";
+import LangSelect from "../LangSelect/LangSelect";
 import "./NavBar.css";
 
 export default function NavBar() {
   const scrollHeight = useScroll();
+  const langSelected = useLangSelected();
   const [hidden, setHidden] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
@@ -21,9 +24,7 @@ export default function NavBar() {
   return (
     <nav className={`row-between nav-bar ${hidden ? "hidden" : "shown"}`}>
       <h1>SNE17</h1>
-      <div className="row-start">
-        <a href="/">Learn More</a>
-      </div>
+      <div className="row-start">{langSelected && <LangSelect />}</div>
     </nav>
   );
 }

@@ -1,0 +1,17 @@
+.lang-selector > div {
+  background-color: white;
+  border: 2px solid black;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.lang-selector > input:checked + div {
+  background-color: yellow;
+}
+
+.lang-selector input {
+  display: none;
+}

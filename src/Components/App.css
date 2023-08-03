@@ -25,6 +25,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .row-between {
@@ -46,6 +47,7 @@ html {
 
 .centered-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
