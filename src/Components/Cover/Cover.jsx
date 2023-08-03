@@ -1,5 +1,7 @@
 import "./Cover.css";
 
-export default function Cover() {
-  return <div className="cover-page" id="cover"></div>;
+export default function Cover({ coverRef }) {
+  return <div ref={coverRef} className="cover-page"></div>;
 }
+
+Cover.propTypes;

@@ -1,18 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useScroll } from "../Context/ScrollContext";
 import BookViewer from "./BookViewer";
 
-export default function InfiniteScroll({ book }) {
+export default function InfiniteScroll({ book, coverRef }) {
   const [current, setCurrent] = useState(1);
   const scrollPosition = useScroll();
+  const firstPageRef = useRef();
 
   const [pages, setPages] = useState([]);
 
   useEffect(() => {
     let blockHeight;
-    const coverHeight = document.getElementById("cover").offsetHeight;
+    const coverHeight = coverRef.current.offsetHeight;
     if (scrollPosition > coverHeight) {
-      blockHeight = document.getElementById("page-1").offsetHeight;
+      blockHeight = firstPageRef.current.offsetHeight;
     }
     if (scrollPosition >= coverHeight + blockHeight * current) {
       setCurrent((prev) => prev + 1);
@@ -33,7 +34,7 @@ export default function InfiniteScroll({ book }) {
     setPages(array);
   }, [current, book]);
 
-  return <BookViewer pages={pages} />;
+  return <BookViewer pages={pages} firstPageRef={firstPageRef} />;
 }
 
 InfiniteScroll.propTypes;
