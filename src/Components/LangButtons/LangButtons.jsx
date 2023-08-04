@@ -10,13 +10,25 @@ export default function LangButtons() {
   }
 
   return (
-    <div className="row-center" onChange={handleChange}>
+    <div className="row-center">
       <label className="lang-selector">
-        <input type="radio" name="lang" value="en" checked={lang === "en"} />
+        <input
+          type="radio"
+          onChange={handleChange}
+          name="lang"
+          value="en"
+          checked={lang === "en"}
+        />
         <div>English</div>
       </label>
       <label className="lang-selector">
-        <input type="radio" name="lang" value="zl" checked={lang === "zl"} />
+        <input
+          type="radio"
+          onChange={handleChange}
+          name="lang"
+          value="zl"
+          checked={lang === "zl"}
+        />
         <div>isiZulu</div>
       </label>
     </div>

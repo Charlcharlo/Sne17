@@ -1,0 +1,41 @@
+.zoom-window {
+  /* transition: 300ms; */
+  width: 100vw;
+  height: calc(100vw * 1.414 + 2px);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+  overflow-y: hidden;
+}
+
+.zoom-window > .page-img {
+  width: 100%;
+  transition: 300ms;
+}
+
+.zoom-window.zoomed {
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.zoom-window.zoomed > .page-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vw;
+}
+
+.zoom-btn-wrapper {
+  width: 100%;
+}
+
+.zoom-toggle {
+  top: 55px;
+  right: 5px;
+  z-index: 5;
+  border: none;
+  background-color: transparent;
+}
+
+.zoom-toggle > svg {
+  width: 40px;
+  height: 40px;
+}

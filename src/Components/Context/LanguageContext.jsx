@@ -23,7 +23,9 @@ export default function LangProvider({ children }) {
 
   function chooseLanguage(newLang) {
     setLang(newLang);
-    setLangSeleced(true);
+    if (!langSelected) {
+      setLangSeleced(true);
+    }
   }
 
   return (

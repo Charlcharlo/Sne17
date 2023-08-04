@@ -3,6 +3,17 @@
   padding: 20px;
 }
 
-.page-wrapper > img {
+.page-wrapper:first-of-type {
+  margin-top: 20px;
+}
+
+.page-wrapper > .page-img {
   max-width: 100%;
+}
+
+@media (max-width: 500px) {
+  .page-wrapper {
+    height: 100vh;
+    padding: 20px 0;
+  }
 }
