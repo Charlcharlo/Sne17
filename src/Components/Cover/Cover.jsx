@@ -1,9 +1,11 @@
-import { useLang } from "../Context/LanguageContext";
+import { useLang, useLangSelected } from "../Context/LanguageContext";
 import LangButtons from "../LangButtons/LangButtons";
+import PdfDownloader from "../PdfDownloader/PdfDownloader";
 import "./Cover.css";
 
 export default function Cover({ coverRef }) {
   const lang = useLang();
+  const langSelected = useLangSelected();
 
   return (
     <div ref={coverRef} className="cover-page centered-container">
@@ -15,6 +17,7 @@ export default function Cover({ coverRef }) {
           : "Please Choose a language"}
       </h1>
       <LangButtons />
+      {langSelected && <PdfDownloader />}
     </div>
   );
 }
