@@ -36,7 +36,7 @@ export default function InfiniteScroll({ coverRef }) {
       index < current + 2 && index < book.count + 1;
       index++
     ) {
-      const filePath = `${window.location.origin}/${book.directory}/${book.prefix}-${index}.${book.ext}`;
+      const filePath = `${window.location.origin}/Sne17/${book.directory}/${book.prefix}-${index}.${book.ext}`;
       array.push(filePath);
     }
     setPages(array);
