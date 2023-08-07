@@ -1,0 +1,25 @@
+.flex-options {
+  gap: 0;
+}
+
+.flex-selector > input {
+  display: none;
+}
+
+.flex-selector > div {
+  background-color: lightgrey;
+  border: 1px solid black;
+}
+
+.flex-selector > input:checked + div,
+.flex-selector:hover > div {
+  background-color: lightsteelblue;
+}
+
+.flex-selector:first-of-type > div {
+  border-left: 2px solid black;
+}
+
+.flex-selector:last-of-type > div {
+  border-right: 2px solid black;
+}

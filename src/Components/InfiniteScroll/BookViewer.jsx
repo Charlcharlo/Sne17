@@ -1,4 +1,4 @@
-import PageWrapper from "./PageWrapper/PageWrapper";
+import PageWrapper from "../PageWrapper/PageWrapper";
 
 export default function BookViewer({ pages, firstPageRef }) {
   function renderPages(page, i) {

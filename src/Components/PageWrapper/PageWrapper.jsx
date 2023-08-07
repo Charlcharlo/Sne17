@@ -1,5 +1,5 @@
-import { useFlex } from "../../Context/FlexContext";
-import ZoomWindow from "../../ZoomWindow/ZoomWindow";
+import { useFlex } from "../Context/FlexContext";
+import FlexOptions from "../FlexOptions/FlexOptions";
 import "./PageWrapper.css";
 
 export default function PageWrapper({ source, id, firstPageRef }) {
@@ -11,7 +11,7 @@ export default function PageWrapper({ source, id, firstPageRef }) {
       id={id}
     >
       {flex ? (
-        <ZoomWindow source={source} />
+        <FlexOptions source={source} />
       ) : (
         <img className="page-img" src={source} />
       )}
