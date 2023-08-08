@@ -52,6 +52,16 @@ html {
   align-items: center;
 }
 
+.invisibutton {
+  border: none;
+  background-color: transparent;
+}
+
+.invisibutton > svg {
+  height: 30px;
+  width: 30px;
+}
+
 @media (max-width: 800px) {
   body {
     overflow-x: hidden;

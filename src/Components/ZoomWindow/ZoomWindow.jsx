@@ -34,7 +34,7 @@ export default function ZoomWindow({ source }) {
   return (
     <>
       <div className="row-end zoom-btn-wrapper">
-        <button className="zoom-toggle" onClick={toggleZoom}>
+        <button className="zoom-toggle invisibutton" onClick={toggleZoom}>
           {zoom ? <ZoomOut /> : <ZoomIn />}
         </button>
       </div>

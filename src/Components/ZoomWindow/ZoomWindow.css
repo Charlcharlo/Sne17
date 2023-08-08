@@ -17,10 +17,8 @@
 }
 
 .zoom-window.zoomed > .page-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200vw;
+  transform: scale(2);
+  transform-origin: 0 0;
 }
 
 .zoom-btn-wrapper {
@@ -31,8 +29,6 @@
   top: 55px;
   right: 5px;
   z-index: 5;
-  border: none;
-  background-color: transparent;
 }
 
 .zoom-toggle > svg {
