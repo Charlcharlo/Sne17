@@ -3,7 +3,7 @@
   width: 100vw;
   height: calc(100vw * 1.414 + 2px);
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 .zoom-window > .page-img {
@@ -26,7 +26,8 @@
 }
 
 .zoom-toggle {
-  top: 55px;
+  position: absolute;
+  top: 45px;
   right: 5px;
   z-index: 5;
 }

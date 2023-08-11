@@ -33,11 +33,6 @@ export default function ZoomWindow({ source }) {
 
   return (
     <>
-      <div className="row-end zoom-btn-wrapper">
-        <button className="zoom-toggle invisibutton" onClick={toggleZoom}>
-          {zoom ? <ZoomOut /> : <ZoomIn />}
-        </button>
-      </div>
       <div
         ref={ref}
         {...doubleTap}
@@ -45,6 +40,9 @@ export default function ZoomWindow({ source }) {
       >
         <img className="page-img" src={source} />
       </div>
+      <button className="zoom-toggle invisibutton" onClick={toggleZoom}>
+        {zoom ? <ZoomOut /> : <ZoomIn />}
+      </button>
     </>
   );
 }
