@@ -28,7 +28,7 @@ export default function PanelSlider({ current, togglePanels }) {
       <div className="panel-window row-start">
         <img
           className="panel-img"
-          src={`${window.location.origin}/placeholder-panels/page-1/panel-${currentPanel}.jpg`}
+          src={`${window.location.origin}/Sne17/placeholder-panels/page-1/panel-${currentPanel}.jpg`}
           alt=""
         />
       </div>

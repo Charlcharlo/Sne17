@@ -23,7 +23,7 @@ export default function MultiPanel() {
       <button className="invisibutton" style={panel} key={i}>
         <img
           className="clickable-panel"
-          src={`${window.location.origin}/${
+          src={`${window.location.origin}/Sne17/${
             pageOnePanels.directory
           }/page-1/panel-${i + 1}.jpg`}
           alt=""
