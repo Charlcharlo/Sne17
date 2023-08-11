@@ -1,3 +1,4 @@
+import "./PanelSlider.css";
 import { useState } from "react";
 import Cancel from "../Icons/Cancel";
 import Next from "../Icons/Next";
@@ -23,10 +24,7 @@ export default function PanelSlider({ current, togglePanels }) {
   }
 
   return (
-    <div className="row-between panel-wrapper">
-      <button className="invisibutton" onClick={decrementCurrent}>
-        <Prev />
-      </button>
+    <div className="panel-wrapper row-center">
       <div className="panel-window row-start">
         <img
           className="panel-img"
@@ -34,7 +32,10 @@ export default function PanelSlider({ current, togglePanels }) {
           alt=""
         />
       </div>
-      <button className="invisibutton" onClick={incrementCurrent}>
+      <button className="invisibutton prev-panel" onClick={decrementCurrent}>
+        <Prev />
+      </button>
+      <button className="invisibutton next-panel" onClick={incrementCurrent}>
         <Next />
       </button>
       <button className="invisibutton cancel-button" onClick={togglePanels}>
