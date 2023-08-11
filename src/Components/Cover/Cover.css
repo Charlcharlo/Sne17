@@ -3,10 +3,12 @@
   background-image: url(/public/Images/Sne-cover.jpg);
   background-position: center;
   gap: 20px;
+  padding: 20px;
 }
 
 .title-image {
   width: 800px;
+  max-width: 100%;
   transition: 300ms;
 }
 
@@ -27,5 +29,15 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .cover-page {
+    background-image: url(/public/Images/Sne-cover-mobi.jpg);
+  }
+
+  .title-sub {
+    font-size: 36px;
   }
 }
