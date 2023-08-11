@@ -12,7 +12,7 @@ export default function Cover({ coverRef }) {
       <div className="title-wrapper">
         <img
           className={`title-image ${langSelected && "large"}`}
-          src={`${window.location.origin}/Images/Sne-title.png`}
+          src={`${window.location.origin}/Sne17/Images/Sne-title.png`}
           alt=""
         />
       </div>
