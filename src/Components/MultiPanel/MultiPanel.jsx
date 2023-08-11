@@ -20,7 +20,7 @@ export default function MultiPanel() {
 
   function renderPanels(panel, i) {
     return (
-      <button className="invisibutton" style={panel}>
+      <button className="invisibutton" style={panel} key={i}>
         <img
           className="clickable-panel"
           src={`${window.location.origin}/${

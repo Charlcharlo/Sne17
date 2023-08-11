@@ -1,4 +1,31 @@
 .cover-page {
   height: 100vh;
-  background-color: yellowgreen;
+  background-image: url(/public/Images/Sne-cover.jpg);
+  background-position: center;
+  gap: 20px;
+}
+
+.title-image {
+  width: 800px;
+  transition: 300ms;
+}
+
+.title-image.large {
+  width: 1000px;
+}
+
+.title-sub {
+  color: antiquewhite;
+  font-size: 50px;
+  animation: fade-in 1000ms;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
