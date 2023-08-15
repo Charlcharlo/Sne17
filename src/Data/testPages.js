@@ -17,27 +17,27 @@ export const pageOnePanels = {
   count: 6,
   layout: [
     {
-      gridColumn: "1 / span 2",
+      gridColumn: "span 2",
       gridRow: "1 / span 2",
     },
     {
-      gridColumn: "3 / span 2",
+      gridColumn: "span 2",
       gridRow: "1 / span 2",
     },
     {
-      gridColumn: "5 / span 2",
+      gridColumn: "span 2",
       gridRow: "1 / span 2",
     },
     {
-      gridColumn: "1 / span 3",
+      gridColumn: "span 3",
+      gridRow: "span 2",
+    },
+    {
+      gridColumn: "span 3",
       gridRow: "3 / span 2",
     },
     {
-      gridColumn: "4 / span 3",
-      gridRow: "3 / span 2",
-    },
-    {
-      gridColumn: "1 / span 6",
+      gridColumn: "span 6",
       gridRow: "5 / span 2",
     },
   ],

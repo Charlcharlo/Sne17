@@ -1,5 +1,5 @@
 import { useFlex } from "../Context/FlexContext";
-import FlexOptions from "../FlexOptions/FlexOptions";
+import MultiPanel from "../MultiPanel/MultiPanel";
 import "./PageWrapper.css";
 
 export default function PageWrapper({ source, id, firstPageRef }) {
@@ -11,7 +11,7 @@ export default function PageWrapper({ source, id, firstPageRef }) {
       id={id}
     >
       {flex ? (
-        <FlexOptions source={source} />
+        <MultiPanel source={source} />
       ) : (
         <img className="page-img" src={source} />
       )}
