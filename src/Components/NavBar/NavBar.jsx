@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLangSelected } from "../Context/LanguageContext";
 import { useScroll } from "../Context/ScrollContext";
+import JumpToPage from "../JumpToPage/JumpToPage";
 import LangSelect from "../LangSelect/LangSelect";
 import "./NavBar.css";
 
@@ -21,10 +22,22 @@ export default function NavBar() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scrollHeight]);
 
+  function scrollTop() {
+    window.scroll({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <nav className={`row-between nav-bar ${hidden ? "hidden" : "shown"}`}>
-      <h1>SNE17</h1>
-      <div className="row-start">{langSelected && <LangSelect />}</div>
+      <button className="invisibutton" onClick={scrollTop}>
+        {" "}
+        <img
+          className="nav-title-img"
+          src={`${window.location.origin}/Images/Sne-title.png`}
+          alt=""
+        />
+      </button>
+      {langSelected && <JumpToPage />}
+      <div className="row-end">{langSelected && <LangSelect />}</div>
     </nav>
   );
 }

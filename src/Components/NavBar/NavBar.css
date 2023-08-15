@@ -20,6 +20,13 @@
 }
 
 .nav-bar.hidden h1,
-.nav-bar.hidden div {
+.nav-bar.hidden div,
+.nav-bar.hidden select,
+.nav-bar.hidden button {
   display: none;
+}
+
+.nav-title-img,
+.nav-bar > div {
+  width: 180px;
 }

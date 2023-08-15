@@ -1,11 +1,14 @@
 import "./LangButtons.css";
 import { useLang, useLangUpdate } from "../Context/LanguageContext";
+import { useSetInitial } from "../Context/InitialContext";
 
 export default function LangButtons() {
   const updateLang = useLangUpdate();
   const lang = useLang();
+  const setInitial = useSetInitial();
 
   function handleChange(e) {
+    setInitial(true);
     updateLang(e.target.value);
   }
 
