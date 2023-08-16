@@ -1,3 +1,6 @@
+import Download from "../Icons/Download";
+import "./PdfDownloader.css";
+
 export default function PdfDownloader() {
   const onButtonClick = () => {
     // using Java Script method to get PDF file
@@ -13,5 +16,10 @@ export default function PdfDownloader() {
       });
     });
   };
-  return <button onClick={onButtonClick}>Download PDF</button>;
+  return (
+    <button className="pdf-button row-center" onClick={onButtonClick}>
+      <p>Download PDF</p>
+      <Download />
+    </button>
+  );
 }

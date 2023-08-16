@@ -1,6 +1,7 @@
 import "./LangButtons.css";
 import { useLang, useLangUpdate } from "../Context/LanguageContext";
 import { useSetInitial } from "../Context/InitialContext";
+import Check from "../Icons/Check";
 
 export default function LangButtons() {
   const updateLang = useLangUpdate();
@@ -13,7 +14,7 @@ export default function LangButtons() {
   }
 
   return (
-    <div className="row-center">
+    <>
       <label className="lang-selector">
         <input
           type="radio"
@@ -22,7 +23,10 @@ export default function LangButtons() {
           value="en"
           checked={lang === "en"}
         />
-        <div>English</div>
+        <div className="row-start">
+          <Check />
+          <p>English</p>
+        </div>
       </label>
       <label className="lang-selector">
         <input
@@ -32,8 +36,11 @@ export default function LangButtons() {
           value="zl"
           checked={lang === "zl"}
         />
-        <div>isiZulu</div>
+        <div className="row-start">
+          <Check />
+          <p>isiZulu</p>
+        </div>
       </label>
-    </div>
+    </>
   );
 }

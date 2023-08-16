@@ -3,10 +3,6 @@
   padding: 20px;
 }
 
-.page-wrapper:first-of-type {
-  margin-top: 20px;
-}
-
 .page-wrapper > .page-img {
   max-width: 100%;
 }

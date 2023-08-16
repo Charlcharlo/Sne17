@@ -1,0 +1,46 @@
+.jtp-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 4px gray inset;
+  transition: transform 300ms;
+}
+
+.jtp-input:focus {
+  border-radius: 10px 10px 0 0;
+}
+
+.jtp-input:focus + .jtp-results,
+.jtp-results:hover {
+  transform: scaleY(1);
+  visibility: visible;
+}
+
+.jtp-results {
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 300ms;
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  top: 100%;
+  box-shadow: var(--dark-shadow);
+  overflow-y: scroll;
+}
+
+.jtp-button {
+  width: 100%;
+  display: block;
+  background-color: var(--med-blue);
+  border: 1px solid var(--main-blue);
+  padding: 10px;
+  color: white;
+  text-align: left;
+  transition: 200ms;
+}
+
+.jtp-button:hover {
+  background-color: var(--main-blue);
+}

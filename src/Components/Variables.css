@@ -1,0 +1,8 @@
+:root {
+  --main-blue: #223657;
+  --dark-blue: #1a273d;
+  --med-blue: #304d7a;
+  --black-blue: #090c13;
+
+  --dark-shadow: 0 0 6px var(--black-blue);
+}

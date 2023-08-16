@@ -8,24 +8,30 @@ export default function Cover({ coverRef }) {
   const langSelected = useLangSelected();
 
   return (
-    <div ref={coverRef} className="cover-page centered-container">
-      <div className="title-wrapper">
-        <img
-          className={`title-image ${langSelected && "large"}`}
-          src={`${window.location.origin}/Sne17/Images/Sne-title.png`}
-          alt=""
-        />
+    <div ref={coverRef} className="cover-page col-between">
+      <div className="centered-container">
+        <div className="title-wrapper">
+          <img
+            className={`title-image ${langSelected && "large"}`}
+            src={`${window.location.origin}/Sne17/Images/Sne-title.png`}
+            alt=""
+          />
+        </div>
+        {langSelected && (
+          <h1 className={`title-sub`}>
+            {lang === "en"
+              ? "And the 17th Symbol"
+              : lang === "zl"
+              ? "Kanye nophawu lwe-17"
+              : ""}
+          </h1>
+        )}
+        {!langSelected && (
+          <div className="row-center">
+            <LangButtons />
+          </div>
+        )}
       </div>
-      {langSelected && (
-        <h1 className={`title-sub`}>
-          {lang === "en"
-            ? "And the 17th Symbol"
-            : lang === "zl"
-            ? "Kanye nophawu lwe-17"
-            : ""}
-        </h1>
-      )}
-      {!langSelected && <LangButtons />}
       {langSelected && <PdfDownloader />}
     </div>
   );

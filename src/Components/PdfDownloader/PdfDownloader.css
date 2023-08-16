@@ -1,1 +1,14 @@
+.pdf-button {
+  background-color: transparent;
+  border: none;
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
 
+.pdf-button > svg {
+  height: 32px;
+  width: 32px;
+  filter: drop-shadow(1px 1px 1px black);
+}

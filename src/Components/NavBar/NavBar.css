@@ -2,21 +2,27 @@
   position: fixed;
   z-index: 100;
   width: 100vw;
-  background-color: #1b283d;
-  color: #e7ba07;
+  background-color: var(--main-blue);
   padding: 10px 20px;
   align-items: center;
-  transition: height 300ms;
-  min-height: 0;
+  transition: 300ms;
+  height: 60px;
+  border-bottom: 2px solid var(--dark-blue);
+  box-shadow: var(--dark-shadow);
+}
+
+.nav-bar .invisibutton {
+  color: white;
 }
 
 .nav-bar.hidden {
-  height: 0;
-  padding: 0 20px;
+  transform: scaleY(0);
+  transform-origin: top;
 }
 
 .nav-bar.shown {
-  height: 60px;
+  transform: scaleY(1);
+  transform-origin: top;
 }
 
 .nav-bar.hidden h1,

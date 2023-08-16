@@ -1,17 +1,19 @@
 .lang-selector > div {
   background-color: white;
+  font-size: 40px;
+  font-weight: 900;
   border: 2px solid black;
   padding: 5px 10px;
   border-radius: 10px;
-  display: block;
   cursor: pointer;
   transition: 300ms;
-}
-
-.lang-selector > input:checked + div {
-  background-color: yellow;
+  box-shadow: var(--dark-shadow);
 }
 
 .lang-selector input {
+  display: none;
+}
+
+.lang-selector > input + div > svg {
   display: none;
 }

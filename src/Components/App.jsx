@@ -1,3 +1,4 @@
+import "./Variables.css";
 import "./App.css";
 import FlexProvider from "./Context/FlexContext";
 import InitialProvider from "./Context/InitialContext";
