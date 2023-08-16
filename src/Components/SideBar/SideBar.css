@@ -1,0 +1,68 @@
+.side-bar {
+  padding: 20px;
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: 300ms;
+  height: 100vh;
+  background-color: var(--main-blue);
+  position: fixed;
+  top: 60px;
+  right: 0;
+  z-index: 101;
+  color: white;
+  box-shadow: var(--dark-shadow);
+}
+
+.side-bar.hidden {
+  transform: scaleX(0);
+}
+
+.panel-section {
+  transition: 100ms;
+  margin-bottom: 20px;
+}
+
+.side-bar.hidden .panel-section {
+  opacity: 0;
+}
+
+.panel-section .lang-selector > div,
+.panel-section .lang-selector > input:checked + div {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 5px 0;
+  font-weight: 400;
+  font-size: 16px;
+  box-shadow: none;
+}
+
+.panel-section .lang-selector > input + div > svg {
+  display: block;
+  visibility: hidden;
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+.panel-section .lang-selector > input:checked + div > svg {
+  visibility: visible;
+}
+
+.panel-link {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px;
+}
+
+.side-bar .pdf-button {
+  font-size: 24px;
+  text-shadow: none;
+}
+
+.side-bar .pdf-button svg {
+  height: 24px;
+  width: 24px;
+  filter: none;
+}
