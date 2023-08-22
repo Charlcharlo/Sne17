@@ -24,6 +24,10 @@
   animation: fade-in 1000ms;
 }
 
+.lang-container {
+  padding-top: 60px;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;

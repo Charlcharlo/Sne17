@@ -1,6 +1,7 @@
-export default function Hamburger() {
+export default function Hamburger({ refProp }) {
   return (
     <svg
+      ref={refProp}
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"
@@ -17,3 +18,5 @@ export default function Hamburger() {
     </svg>
   );
 }
+
+Hamburger.propTypes;

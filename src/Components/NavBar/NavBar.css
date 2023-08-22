@@ -5,14 +5,18 @@
   background-color: var(--main-blue);
   padding: 10px 20px;
   align-items: center;
-  transition: 300ms;
+  transition: 300ms ease-out;
   height: 60px;
-  border-bottom: 2px solid var(--dark-blue);
+  /* border-bottom: 2px solid var(--dark-blue); */
   box-shadow: var(--dark-shadow);
 }
 
-.nav-bar .invisibutton {
-  color: white;
+.nav-bar .invisibutton-wrapper {
+  color: var(--white-blue);
+}
+
+.nav-bar .invisibutton-wrapper:hover {
+  color: var(--hl-green);
 }
 
 .nav-bar.hidden {

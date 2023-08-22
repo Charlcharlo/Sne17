@@ -7,12 +7,19 @@ export default function BookViewer({ pages, firstPageRef }) {
     return i === 0 ? (
       <PageWrapper
         id={`page-${i + offset + 1}`}
-        source={page}
+        // source={page}
+        info={page}
         key={i}
         firstPageRef={firstPageRef}
       />
     ) : (
-      <PageWrapper id={`page-${i + 1}`} source={page} key={i} />
+      <PageWrapper
+        id={`page-${i + 1}`}
+        // source={page}
+        info={page}
+        key={i}
+        index={i}
+      />
     );
   }
 

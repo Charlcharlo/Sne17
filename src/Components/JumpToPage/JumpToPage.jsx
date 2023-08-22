@@ -34,7 +34,7 @@ export default function JumpToPage() {
 
   function renderOptions(option, i) {
     return (
-      <button className="jtp-button" onClick={() => handleClick(i)}>
+      <button className="jtp-button" onClick={() => handleClick(i)} key={i}>
         {option}
       </button>
     );

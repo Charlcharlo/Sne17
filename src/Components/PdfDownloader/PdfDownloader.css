@@ -3,8 +3,12 @@
   border: none;
   font-size: 32px;
   font-weight: 800;
-  color: white;
+  color: var(--white-blue);
   text-shadow: 1px 1px 1px black;
+}
+
+.pdf-button:hover {
+  color: var(--white-yellow);
 }
 
 .pdf-button > svg {

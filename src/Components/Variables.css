@@ -1,8 +1,16 @@
 :root {
   --main-blue: #223657;
-  --dark-blue: #1a273d;
+  --darker-blue: #161a3f;
   --med-blue: #304d7a;
-  --black-blue: #090c13;
+  --black-blue: #191822;
+  --white-blue: #f9fbff;
+
+  --med-green: #2bbeb0;
+  --hl-green: #68c4ba;
+  --darker-green: #3c7288;
+
+  --white-yellow: #fff9cc;
 
   --dark-shadow: 0 0 6px var(--black-blue);
+  --dark-shadow-left: -4px 0px 4px var(--black-blue);
 }

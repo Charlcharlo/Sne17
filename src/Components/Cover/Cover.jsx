@@ -27,7 +27,7 @@ export default function Cover({ coverRef }) {
           </h1>
         )}
         {!langSelected && (
-          <div className="row-center">
+          <div className="row-center lang-container">
             <LangButtons />
           </div>
         )}

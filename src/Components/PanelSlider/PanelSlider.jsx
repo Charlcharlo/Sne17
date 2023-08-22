@@ -1,52 +1,67 @@
 import "./PanelSlider.css";
-import { useState } from "react";
+// import { useState } from "react";
 import Cancel from "../Icons/Cancel";
 import Next from "../Icons/Next";
 import Prev from "../Icons/Prev";
-import { pageOnePanels } from "../../Data/testPages";
+import ClickAwayListener from "react-click-away-listener";
+// import { pageOnePanels } from "../../Data/testPages";
 
-export default function PanelSlider({ current, togglePanels }) {
-  const [currentPanel, setCurrentPanel] = useState(current);
-  const panelList = pageOnePanels.layout;
+export default function PanelSlider({
+  currentPanel,
+  sliderRef,
+  pagePanels,
+  incrementCurrent,
+  decrementCurrent,
+}) {
+  // const panelList = pageOnePanels.layout;
 
-  function incrementCurrent() {
-    if (currentPanel < 6) {
-      setCurrentPanel((prev) => {
-        return prev + 1;
-      });
-    }
+  function closeSlider() {
+    sliderRef.current.close();
   }
 
-  function decrementCurrent() {
-    if (currentPanel > 1) {
-      setCurrentPanel((prev) => {
-        return prev - 1;
-      });
+  function clickAway(e) {
+    if (e.target.nodeName === "DIALOG") {
+      sliderRef.current.close();
     }
   }
 
   return (
-    <div className="panel-wrapper row-center">
-      <div className="panel-window row-start">
-        <img
-          className={`panel-img ${
-            panelList[currentPanel].gridColumn <
-              panelList[currentPanel].gridRow && "landscape"
-          }`}
+    <dialog className="panel-modal" ref={sliderRef}>
+      <ClickAwayListener onClickAway={clickAway}>
+        <div className="row-between">
+          <button
+            className="invisibutton prev-panel"
+            onClick={decrementCurrent}
+          >
+            <Prev />
+          </button>
+          <div
+            className="centered-container panel-window"
+            style={{
+              backgroundColor: "beige",
+              height: `${pagePanels[currentPanel].rows * 140}px`,
+              width: `${pagePanels[currentPanel].cols * 100}px`,
+            }}
+          >
+            <h1>{`panel ${currentPanel + 1}`}</h1>
+          </div>
+          {/* <img
+          className={`panel-img`}
           src={`${window.location.origin}/Sne17/placeholder-panels/page-1/panel-${currentPanel}.jpg`}
           alt=""
-        />
-      </div>
-      <button className="invisibutton prev-panel" onClick={decrementCurrent}>
-        <Prev />
-      </button>
-      <button className="invisibutton next-panel" onClick={incrementCurrent}>
-        <Next />
-      </button>
-      <button className="invisibutton cancel-button" onClick={togglePanels}>
-        <Cancel />
-      </button>
-    </div>
+        /> */}
+          <button
+            className="invisibutton next-panel"
+            onClick={incrementCurrent}
+          >
+            <Next />
+          </button>
+          <button className="invisibutton cancel-button" onClick={closeSlider}>
+            <Cancel />
+          </button>
+        </div>
+      </ClickAwayListener>
+    </dialog>
   );
 }
 

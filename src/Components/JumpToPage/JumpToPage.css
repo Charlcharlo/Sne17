@@ -1,14 +1,23 @@
 .jtp-input {
   width: 100%;
   padding: 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border: none;
-  box-shadow: 0 0 4px gray inset;
-  transition: transform 300ms;
+  background-color: var(--med-blue);
+  box-shadow: 0 0 4px var(--black-blue) inset;
+  transition: 300ms ease-in;
+}
+
+.jtp-input::placeholder {
+  color: #aec6ce;
+}
+
+.jtp-input:focus::placeholder {
+  color: var(--med-blue);
 }
 
 .jtp-input:focus {
-  border-radius: 10px 10px 0 0;
+  background-color: var(--white-blue);
 }
 
 .jtp-input:focus + .jtp-results,
@@ -21,7 +30,7 @@
   visibility: hidden;
   transform: scaleY(0);
   transform-origin: top;
-  transition: 300ms;
+  transition: 300ms ease-in;
   position: absolute;
   width: 100%;
   height: 200px;
@@ -30,17 +39,34 @@
   overflow-y: scroll;
 }
 
+.jtp-results::-webkit-scrollbar {
+  background: var(--darker-blue);
+}
+
+.jtp-results::-webkit-scrollbar-thumb {
+  background: var(--med-blue);
+  box-shadow: 0 0 2px var(--black-blue) inset;
+  border: 1px solid var(--darker-blue);
+}
+
+.jtp-results::-webkit-scrollbar-thumb:hover {
+  background: var(--hl-green);
+}
+
 .jtp-button {
   width: 100%;
   display: block;
   background-color: var(--med-blue);
-  border: 1px solid var(--main-blue);
+  border: 1px solid var(--darker-blue);
   padding: 10px;
-  color: white;
+  color: var(--white-blue);
   text-align: left;
   transition: 200ms;
 }
 
 .jtp-button:hover {
-  background-color: var(--main-blue);
+  /* background-color: var(--darker-green); */
+  background: var(--hl-green);
+
+  color: var(--black-blue);
 }

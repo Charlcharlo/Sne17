@@ -1,0 +1,21 @@
+.panel-multi {
+  width: 100vw;
+  max-width: 1000px;
+  height: 1400px;
+  display: grid;
+  grid-template: repeat(12, 8.33fr) / repeat(12, 8.33fr);
+  gap: 10px;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.clickable-panel {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1000px) {
+  .panel-multi {
+    height: 140vw;
+  }
+}

@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLangSelected } from "../Context/LanguageContext";
 import { useScroll } from "../Context/ScrollContext";
 import Hamburger from "../Icons/Hamburger";
+import Invisibutton from "../Invisibutton/Invisibutton";
 import JumpToPage from "../JumpToPage/JumpToPage";
 import SideBar from "../SideBar/SideBar";
 import "./NavBar.css";
@@ -12,6 +13,8 @@ export default function NavBar() {
   const [hidden, setHidden] = useState(false);
   const [panelHidden, setPanelHidden] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const buttonRef = useRef();
+  const svgRef = useRef();
 
   useEffect(() => {
     const position = scrollHeight;
@@ -35,6 +38,16 @@ export default function NavBar() {
     });
   }
 
+  function hidePanel(e) {
+    if (e.target !== buttonRef.current && e.target !== svgRef.current) {
+      setPanelHidden((prev) => {
+        if (!prev) {
+          return true;
+        } else return prev;
+      });
+    }
+  }
+
   return (
     <>
       <nav className={`row-between nav-bar ${hidden ? "hidden" : "shown"}`}>
@@ -49,13 +62,17 @@ export default function NavBar() {
         {langSelected && <JumpToPage />}
         <div className="row-end">
           {langSelected && (
-            <button className="invisibutton" onClick={togglePanel}>
-              <Hamburger />
-            </button>
+            <Invisibutton
+              className="invisibutton"
+              onClick={togglePanel}
+              buttonRef={buttonRef}
+            >
+              <Hamburger refProp={svgRef} />
+            </Invisibutton>
           )}
         </div>
       </nav>
-      <SideBar hidden={panelHidden} />
+      <SideBar hidden={panelHidden} hidePanel={hidePanel} />
     </>
   );
 }
