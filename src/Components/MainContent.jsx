@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { useLangSelected } from "./Context/LanguageContext";
-import Cover from "./Cover/Cover";
-import InfiniteScroll from "./InfiniteScroll/InfiniteScroll";
-import NavBar from "./NavBar/NavBar";
+import Cover from "./Navigation/Cover/Cover";
+import InfiniteScroll from "./Pages/InfiniteScroll/InfiniteScroll";
+import NavBar from "./Navigation/NavBar/NavBar";
 
 export default function MainContent() {
   const langSelected = useLangSelected();

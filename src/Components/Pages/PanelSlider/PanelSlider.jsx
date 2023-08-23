@@ -1,12 +1,11 @@
 import "./PanelSlider.css";
 // import { useState } from "react";
-import Cancel from "../Icons/Cancel";
-import Next from "../Icons/Next";
-import Prev from "../Icons/Prev";
+import Cancel from "../../Assets/Icons/Cancel";
+import Next from "../../Assets/Icons/Next";
+import Prev from "../../Assets/Icons/Prev";
 import ClickAwayListener from "react-click-away-listener";
-import { useFlex } from "../Context/FlexContext";
+import { useFlex } from "../../Context/FlexContext";
 import { useRef } from "react";
-// import { pageOnePanels } from "../../Data/testPages";
 
 export default function PanelSlider({
   currentPanel,

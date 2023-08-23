@@ -2,12 +2,12 @@ import "./InfiniteScroll.css";
 import { useEffect, useRef, useState } from "react";
 // import { placeholder, placeholderZl } from "../../Data/testPages";
 // import { useLang } from "../Context/LanguageContext";
-import { useScroll } from "../Context/ScrollContext";
+import { useScroll } from "../../Context/ScrollContext";
 import BookViewer from "./BookViewer";
-import { useOffset } from "../Context/OffsetContext";
-import { useInitial } from "../Context/InitialContext";
+import { useOffset } from "../../Context/OffsetContext";
+import { useInitial } from "../../Context/InitialContext";
 import PageNavigation from "../PageNavigation/PageNavigation";
-import { panelBookPH, scottPilgrim } from "../../Data/testPages";
+import { scottPilgrim } from "../../../Data/testPages";
 
 export default function InfiniteScroll({ coverRef }) {
   const [current, setCurrent] = useState(1);

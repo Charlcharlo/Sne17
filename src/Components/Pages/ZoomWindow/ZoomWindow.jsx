@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useDoubleTap } from "use-double-tap";
-import { useScroll } from "../Context/ScrollContext";
-import ZoomIn from "../Icons/ZoomIn";
-import ZoomOut from "../Icons/ZoomOut";
+import { useScroll } from "../../Context/ScrollContext";
+import ZoomIn from "../../Assets/Icons/ZoomIn";
+import ZoomOut from "../../Assets/Icons/ZoomOut";
 
 import "./ZoomWindow.css";
 

@@ -1,5 +1,5 @@
 import ZoomWindow from "../ZoomWindow/ZoomWindow";
-import { useFlex } from "../Context/FlexContext";
+import { useFlex } from "../../Context/FlexContext";
 import "./SplashPage.css";
 
 export default function SplashPage({ src }) {

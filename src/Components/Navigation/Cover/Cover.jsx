@@ -1,4 +1,4 @@
-import { useLang, useLangSelected } from "../Context/LanguageContext";
+import { useLang, useLangSelected } from "../../Context/LanguageContext";
 import LangButtons from "../LangButtons/LangButtons";
 import PdfDownloader from "../PdfDownloader/PdfDownloader";
 import "./Cover.css";

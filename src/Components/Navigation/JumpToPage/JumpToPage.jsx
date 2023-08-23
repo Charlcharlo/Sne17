@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { scottPilgrim } from "../../Data/testPages";
-import { useSetInitial } from "../Context/InitialContext";
-import { useSetOffset } from "../Context/OffsetContext";
+import { scottPilgrim } from "../../../Data/testPages";
+import { useSetInitial } from "../../Context/InitialContext";
+import { useSetOffset } from "../../Context/OffsetContext";
 import "./JumpToPage.css";
 
 export default function JumpToPage() {

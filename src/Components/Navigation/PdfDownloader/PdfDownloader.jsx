@@ -1,4 +1,4 @@
-import Download from "../Icons/Download";
+import Download from "../../Assets/Icons/Download";
 import "./PdfDownloader.css";
 
 export default function PdfDownloader() {

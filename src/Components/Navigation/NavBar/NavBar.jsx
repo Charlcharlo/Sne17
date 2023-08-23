@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { useLangSelected } from "../Context/LanguageContext";
-import { useScroll } from "../Context/ScrollContext";
-import Hamburger from "../Icons/Hamburger";
-import Invisibutton from "../Invisibutton/Invisibutton";
+import { useLangSelected } from "../../Context/LanguageContext";
+import { useScroll } from "../../Context/ScrollContext";
+import Hamburger from "../../Assets/Icons/Hamburger";
+import Invisibutton from "../../Assets/Invisibutton/Invisibutton";
 import JumpToPage from "../JumpToPage/JumpToPage";
 import SideBar from "../SideBar/SideBar";
 import "./NavBar.css";
