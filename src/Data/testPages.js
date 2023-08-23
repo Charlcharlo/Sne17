@@ -198,3 +198,116 @@ export const panelBookPH = {
     },
   ],
 };
+
+export const scottPilgrim = {
+  pages: [
+    {
+      title: "Pages 1 and 2",
+      type: "splash",
+      src: `${window.location.origin}/ScottPilgrim/Page-1-2.png`,
+    },
+    {
+      title: "Page 3",
+      type: "comic",
+      panels: [
+        {
+          cols: 12,
+          rows: 5,
+          src: `${window.location.origin}/ScottPilgrim/Page-3/panel-1.png`,
+        },
+        {
+          cols: 6,
+          rows: 3,
+          src: `${window.location.origin}/ScottPilgrim/Page-3/panel-2.png`,
+        },
+        {
+          cols: 6,
+          rows: 3,
+          src: `${window.location.origin}/ScottPilgrim/Page-3/panel-3.png`,
+        },
+        {
+          cols: 7,
+          rows: 2,
+          src: `${window.location.origin}/ScottPilgrim/Page-3/panel-4.png`,
+        },
+        {
+          cols: 5,
+          rows: 2,
+          src: `${window.location.origin}/ScottPilgrim/Page-3/panel-5.png`,
+        },
+        {
+          cols: 12,
+          rows: 2,
+          src: `${window.location.origin}/ScottPilgrim/Page-3/panel-6.png`,
+        },
+      ],
+    },
+    {
+      title: "Page 4",
+      type: "comic",
+      panels: [
+        {
+          cols: 5,
+          rows: 3,
+          src: `${window.location.origin}/ScottPilgrim/Page-4/panel-1.png`,
+        },
+        {
+          cols: 7,
+          rows: 3,
+          src: `${window.location.origin}/ScottPilgrim/Page-4/panel-2.png`,
+        },
+        {
+          cols: 7,
+          rows: 3,
+          src: `${window.location.origin}/ScottPilgrim/Page-4/panel-3.png`,
+        },
+        {
+          cols: 5,
+          rows: 3,
+          src: `${window.location.origin}/ScottPilgrim/Page-4/panel-4.png`,
+        },
+        {
+          cols: 6,
+          rows: 3,
+          src: `${window.location.origin}/ScottPilgrim/Page-4/panel-5.png`,
+        },
+        {
+          cols: 6,
+          rows: 3,
+          src: `${window.location.origin}/ScottPilgrim/Page-4/panel-6.png`,
+        },
+        {
+          cols: 12,
+          rows: 3,
+          src: `${window.location.origin}/ScottPilgrim/Page-4/panel-7.png`,
+        },
+      ],
+    },
+    {
+      title: "Page 5",
+      type: "comic",
+      panels: [
+        {
+          cols: 12,
+          rows: 5,
+          src: `${window.location.origin}/ScottPilgrim/Page-5/panel-1.png`,
+        },
+        {
+          cols: 4,
+          rows: 4,
+          src: `${window.location.origin}/ScottPilgrim/Page-5/panel-2.png`,
+        },
+        {
+          cols: 8,
+          rows: 4,
+          src: `${window.location.origin}/ScottPilgrim/Page-5/panel-3.png`,
+        },
+        {
+          cols: 12,
+          rows: 3,
+          src: `${window.location.origin}/ScottPilgrim/Page-5/panel-4.png`,
+        },
+      ],
+    },
+  ],
+};
