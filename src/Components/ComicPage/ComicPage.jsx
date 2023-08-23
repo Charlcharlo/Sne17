@@ -38,22 +38,19 @@ export default function ComicPage({ info }) {
   function renderPanels(panel, i) {
     return (
       <button
-        // className="invisibutton"
+        className="invisibutton"
         style={{
           gridColumn: `span ${panel.cols}`,
           gridRow: `span ${panel.rows}`,
         }}
         key={i}
         value={i}
-        onClick={(e) => showSlider(e.target.value)}
+        onClick={(e) => {
+          showSlider(e.currentTarget.value);
+          console.log(e.target);
+        }}
       >
-        {/* <img
-          className="clickable-panel"
-          src={`${window.location.origin}/Sne17/${
-            pageOnePanels.directory
-          }/page-1/panel-${i + 1}.jpg`}
-          alt=""
-        /> */}
+        <img className="clickable-panel" src={panel.src} alt="" />
       </button>
     );
   }

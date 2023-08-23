@@ -4,6 +4,8 @@ import Cancel from "../Icons/Cancel";
 import Next from "../Icons/Next";
 import Prev from "../Icons/Prev";
 import ClickAwayListener from "react-click-away-listener";
+import { useFlex } from "../Context/FlexContext";
+import { useRef } from "react";
 // import { pageOnePanels } from "../../Data/testPages";
 
 export default function PanelSlider({
@@ -14,20 +16,23 @@ export default function PanelSlider({
   decrementCurrent,
 }) {
   // const panelList = pageOnePanels.layout;
+  const flex = useFlex();
+  const windowRef = useRef();
 
   function closeSlider() {
     sliderRef.current.close();
   }
 
   function clickAway(e) {
-    if (e.target.nodeName === "DIALOG") {
+    if (e.target.nodeName === "DIALOG" && !flex) {
+      windowRef.current.scroll(0, 0);
       sliderRef.current.close();
     }
   }
 
   return (
     <dialog className="panel-modal" ref={sliderRef}>
-      <ClickAwayListener onClickAway={clickAway}>
+      <ClickAwayListener onClickAway={clickAway} touchEvent="touchend">
         <div className="row-between">
           <button
             className="invisibutton prev-panel"
@@ -35,21 +40,13 @@ export default function PanelSlider({
           >
             <Prev />
           </button>
-          <div
-            className="centered-container panel-window"
-            style={{
-              backgroundColor: "beige",
-              height: `${pagePanels[currentPanel].rows * 140}px`,
-              width: `${pagePanels[currentPanel].cols * 100}px`,
-            }}
-          >
-            <h1>{`panel ${currentPanel + 1}`}</h1>
+          <div className="panel-window" ref={windowRef}>
+            <img
+              className={`panel-img`}
+              src={pagePanels[currentPanel].src}
+              alt=""
+            />
           </div>
-          {/* <img
-          className={`panel-img`}
-          src={`${window.location.origin}/Sne17/placeholder-panels/page-1/panel-${currentPanel}.jpg`}
-          alt=""
-        /> */}
           <button
             className="invisibutton next-panel"
             onClick={incrementCurrent}

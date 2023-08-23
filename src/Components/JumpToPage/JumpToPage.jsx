@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
+import { scottPilgrim } from "../../Data/testPages";
 import { useSetInitial } from "../Context/InitialContext";
 import { useSetOffset } from "../Context/OffsetContext";
 import "./JumpToPage.css";
 
 export default function JumpToPage() {
-  const testData = ["Page 1", "Page 2", "Page 3", "Page 4", "Page 5", "Page 6"];
-
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState(testData);
+  const [results, setResults] = useState(scottPilgrim.pages);
   const setOffset = useSetOffset();
   const setInitial = useSetInitial();
 
@@ -23,8 +22,8 @@ export default function JumpToPage() {
 
   useEffect(() => {
     const results = [];
-    testData.forEach((element) => {
-      if (element.includes(query)) {
+    scottPilgrim.pages.forEach((element) => {
+      if (element.title.includes(query)) {
         results.push(element);
       }
       setResults(results);
@@ -35,7 +34,7 @@ export default function JumpToPage() {
   function renderOptions(option, i) {
     return (
       <button className="jtp-button" onClick={() => handleClick(i)} key={i}>
-        {option}
+        {option.title}
       </button>
     );
   }

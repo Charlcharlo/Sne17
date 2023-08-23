@@ -7,13 +7,14 @@ import BookViewer from "./BookViewer";
 import { useOffset } from "../Context/OffsetContext";
 import { useInitial } from "../Context/InitialContext";
 import PageNavigation from "../PageNavigation/PageNavigation";
-import { panelBookPH } from "../../Data/testPages";
+import { panelBookPH, scottPilgrim } from "../../Data/testPages";
 
 export default function InfiniteScroll({ coverRef }) {
   const [current, setCurrent] = useState(1);
-  const [book, setBook] = useState(panelBookPH.pages);
+  const [book, setBook] = useState(scottPilgrim.pages);
   const [pages, setPages] = useState([]);
   const [ready, setReady] = useState(false);
+  const [stackHeight, setStackHeight] = useState(0);
   const scrollPosition = useScroll();
   // const lang = useLang();
   const offset = useOffset();
@@ -21,16 +22,20 @@ export default function InfiniteScroll({ coverRef }) {
   const firstPageRef = useRef();
 
   useEffect(() => {
-    let blockHeight;
-    const coverHeight = coverRef.current.offsetHeight;
-    if (scrollPosition > coverHeight) {
-      blockHeight = firstPageRef.current.offsetHeight;
+    let stackHeight = 0;
+    for (let i = 0; i < pages.length - 1; i++) {
+      const pageHeight = document.getElementById(`page-${i}`).offsetHeight;
+      stackHeight = stackHeight + pageHeight;
     }
-    if (scrollPosition >= coverHeight + blockHeight * current) {
+    setStackHeight(stackHeight);
+  }, [pages]);
+
+  useEffect(() => {
+    const coverHeight = coverRef.current.offsetHeight;
+    if (scrollPosition >= coverHeight + stackHeight) {
       setCurrent((prev) => prev + 1);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scrollPosition]);
+  }, [coverRef, scrollPosition, stackHeight]);
 
   // useEffect(() => {
   //   setBook(lang === "zl" ? placeholderZl : placeholder);
@@ -40,10 +45,9 @@ export default function InfiniteScroll({ coverRef }) {
     const array = [];
     for (
       let index = offset;
-      index < current + offset + 2 && index < book.length;
+      index < current + offset + 1 && index < book.length;
       index++
     ) {
-      // const filePath = `${window.location.origin}/Sne17/${book.directory}/${book.prefix}-${index}.${book.ext}`;
       array.push(book[index]);
     }
     setPages(array);
@@ -52,7 +56,8 @@ export default function InfiniteScroll({ coverRef }) {
 
   useEffect(() => {
     if (ready && !initial) {
-      const newPage = document.getElementById(`page-${offset + 1}`);
+      console.log(offset);
+      const newPage = document.getElementById(`page-0`);
       newPage.scrollIntoView({ behavior: "smooth" });
     }
   }, [offset, ready, initial]);
