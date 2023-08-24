@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import PanelSlider from "../PanelSlider/PanelSlider";
 import "./ComicPage.css";
 
-export default function ComicPage({ info }) {
+export default function ComicPage({ info, index }) {
   const [currentPanel, setCurrentPanel] = useState(0);
   const pageRef = useRef();
   const sliderRef = useRef();
@@ -19,7 +19,12 @@ export default function ComicPage({ info }) {
         return prev + 1;
       });
     } else {
+      const iPlusOne = index + 1;
+      const nextPage = document.getElementById(`page-${iPlusOne}`);
       sliderRef.current.close();
+      if (nextPage) {
+        nextPage.scrollIntoView({ behavior: "smooth" });
+      }
     }
   }
 
@@ -28,6 +33,13 @@ export default function ComicPage({ info }) {
       setCurrentPanel((prev) => {
         return prev - 1;
       });
+    } else {
+      const iMinusOne = index - 1;
+      const prevPage = document.getElementById(`page-${iMinusOne}`);
+      sliderRef.current.close();
+      if (prevPage) {
+        prevPage.scrollIntoView({ behavior: "smooth" });
+      }
     }
   }
 

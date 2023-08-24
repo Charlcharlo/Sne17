@@ -17,6 +17,8 @@ export default function PanelSlider({
   // const panelList = pageOnePanels.layout;
   const flex = useFlex();
   const windowRef = useRef();
+  let touchStart;
+  let scrollStart;
 
   function closeSlider() {
     sliderRef.current.close();
@@ -26,6 +28,27 @@ export default function PanelSlider({
     if (e.target.nodeName === "DIALOG" && !flex) {
       windowRef.current.scroll(0, 0);
       sliderRef.current.close();
+    }
+  }
+
+  function handleTouchStart(e) {
+    touchStart = e.touches[0].clientX;
+    scrollStart = windowRef.current.scrollLeft;
+  }
+
+  function handleMove(e) {
+    if (
+      scrollStart === 0 ||
+      scrollStart ===
+        windowRef.current.scrollWidth - windowRef.current.clientWidth
+    ) {
+      const touchPosition = e.touches[0].clientX;
+      if (touchPosition > touchStart) {
+        decrementCurrent();
+      }
+      if (touchPosition < touchStart) {
+        incrementCurrent();
+      }
     }
   }
 
@@ -39,7 +62,12 @@ export default function PanelSlider({
           >
             <Prev />
           </button>
-          <div className="panel-window" ref={windowRef}>
+          <div
+            className="panel-window"
+            ref={windowRef}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleMove}
+          >
             <img
               className={`panel-img`}
               src={pagePanels[currentPanel].src}
