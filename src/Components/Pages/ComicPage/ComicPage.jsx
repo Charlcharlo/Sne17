@@ -1,22 +1,16 @@
 import { useRef, useState } from "react";
-// import { pageOnePanels } from "../../Data/testPages";
-// import { useFlex } from "../Context/FlexContext";
 import PanelSlider from "../PanelSlider/PanelSlider";
 import "./ComicPage.css";
 
 export default function ComicPage({ info }) {
   const [currentPanel, setCurrentPanel] = useState(0);
   const pageRef = useRef();
-  // const flex = useFlex();
   const sliderRef = useRef();
 
   function showSlider(index) {
     const num = parseInt(index);
     setCurrentPanel(num);
     sliderRef.current.showModal();
-    // if (!flex) {
-    //   pageRef.current.scrollIntoView({ behavior: "smooth" });
-    // };
   }
 
   function incrementCurrent() {
@@ -24,6 +18,8 @@ export default function ComicPage({ info }) {
       setCurrentPanel((prev) => {
         return prev + 1;
       });
+    } else {
+      sliderRef.current.close();
     }
   }
 
@@ -47,7 +43,6 @@ export default function ComicPage({ info }) {
         value={i}
         onClick={(e) => {
           showSlider(e.currentTarget.value);
-          console.log(e.target);
         }}
       >
         <img className="clickable-panel" src={panel.src} alt="" />

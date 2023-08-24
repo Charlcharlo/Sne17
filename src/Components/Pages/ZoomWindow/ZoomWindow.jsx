@@ -44,8 +44,7 @@ export default function ZoomWindowCopy({ source }) {
 
   return (
     <>
-      <div className="row-between zoom-btn-wrapper">
-        <h2>Double Tap to Zoom</h2>
+      <div className="row-end zoom-btn-wrapper">
         <button className="zoom-toggle invisibutton" onClick={toggleZoom}>
           {zoom ? <ZoomOut /> : <ZoomIn />}
         </button>
@@ -57,6 +56,7 @@ export default function ZoomWindowCopy({ source }) {
       >
         <img className="page-img" ref={imgRef} src={source} />
         <div ref={backBoard} className="back-board" />
+        {!zoom && <h2 className="zoom-hint">Double Tap to Zoom</h2>}
       </div>
     </>
   );

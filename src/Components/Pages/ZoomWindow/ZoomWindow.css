@@ -46,3 +46,11 @@
   width: 40px;
   height: 40px;
 }
+
+.zoom-hint {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  width: 100vw;
+  color: var(--gray-green);
+}

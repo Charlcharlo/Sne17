@@ -1,3 +1,8 @@
+.jtp-wrapper {
+  flex-grow: 1;
+  max-width: 300px;
+}
+
 .jtp-input {
   width: 100%;
   padding: 10px;
@@ -10,9 +15,12 @@
 
 .jtp-input::placeholder {
   color: #aec6ce;
+  text-align: center;
+  transition: 300ms ease-in;
 }
 
 .jtp-input:focus::placeholder {
+  text-align: left;
   color: var(--med-blue);
 }
 

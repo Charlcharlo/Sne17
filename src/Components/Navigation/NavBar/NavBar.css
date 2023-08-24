@@ -37,6 +37,17 @@
 }
 
 .nav-title-img,
-.nav-bar > div {
+.nav-bar > .row-end {
   width: 180px;
+  max-width: 30vw;
+}
+
+@media (max-width: 500px) {
+  .nav-bar {
+    padding: 10px;
+  }
+
+  .nav-bar > .row-end {
+    width: max-content;
+  }
 }
