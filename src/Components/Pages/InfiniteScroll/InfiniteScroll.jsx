@@ -1,5 +1,5 @@
 import "./InfiniteScroll.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 // import { placeholder, placeholderZl } from "../../Data/testPages";
 // import { useLang } from "../Context/LanguageContext";
 import { useScroll } from "../../Context/ScrollContext";
@@ -19,7 +19,6 @@ export default function InfiniteScroll({ coverRef }) {
   // const lang = useLang();
   const offset = useOffset();
   const initial = useInitial();
-  const firstPageRef = useRef();
 
   useEffect(() => {
     let stackHeight = 0;
@@ -56,7 +55,6 @@ export default function InfiniteScroll({ coverRef }) {
 
   useEffect(() => {
     if (ready && !initial) {
-      console.log(offset);
       const newPage = document.getElementById(`page-0`);
       newPage.scrollIntoView({ behavior: "smooth" });
     }
@@ -65,7 +63,7 @@ export default function InfiniteScroll({ coverRef }) {
   return (
     <>
       {offset > 0 && <PageNavigation />}
-      <BookViewer pages={pages} firstPageRef={firstPageRef} />
+      <BookViewer pages={pages} />
     </>
   );
 }

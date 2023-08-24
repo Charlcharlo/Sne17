@@ -11,7 +11,6 @@ export default function JumpToPage() {
   const setInitial = useSetInitial();
 
   function handleClick(offset) {
-    console.log("clicked");
     setInitial(false);
     setOffset(offset);
   }

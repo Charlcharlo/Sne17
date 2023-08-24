@@ -309,5 +309,26 @@ export const scottPilgrim = {
         },
       ],
     },
+    {
+      title: "Page 6",
+      type: "comic",
+      panels: [
+        {
+          cols: 12,
+          rows: 8,
+          src: `${window.location.origin}/Sne17/ScottPilgrim/Page-6/panel-1.png`,
+        },
+        {
+          cols: 6,
+          rows: 4,
+          src: `${window.location.origin}/Sne17/ScottPilgrim/Page-6/panel-2.png`,
+        },
+        {
+          cols: 6,
+          rows: 4,
+          src: `${window.location.origin}/Sne17/ScottPilgrim/Page-6/panel-3.png`,
+        },
+      ],
+    },
   ],
 };
