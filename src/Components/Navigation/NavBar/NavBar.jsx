@@ -55,7 +55,7 @@ export default function NavBar() {
           {" "}
           <img
             className="nav-title-img"
-            src={`${window.location.origin}/Images/Sne-title.png`}
+            src={`${window.location.origin}/Sne17/Images/Sne-title.png`}
             alt=""
           />
         </button>
