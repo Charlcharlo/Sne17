@@ -22,6 +22,7 @@ export default function ComicPage({ info, index }) {
       const iPlusOne = index + 1;
       const nextPage = document.getElementById(`page-${iPlusOne}`);
       sliderRef.current.close();
+      setCurrentPanel(0);
       if (nextPage) {
         nextPage.scrollIntoView({ behavior: "smooth" });
       }
@@ -37,6 +38,7 @@ export default function ComicPage({ info, index }) {
       const iMinusOne = index - 1;
       const prevPage = document.getElementById(`page-${iMinusOne}`);
       sliderRef.current.close();
+      setCurrentPanel(0);
       if (prevPage) {
         prevPage.scrollIntoView({ behavior: "smooth" });
       }

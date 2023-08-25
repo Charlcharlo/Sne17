@@ -19,6 +19,7 @@ export default function PanelSlider({
   const windowRef = useRef();
   let touchStart;
   let scrollStart;
+  const source = pagePanels[currentPanel].src;
 
   function closeSlider() {
     sliderRef.current.close();
@@ -37,18 +38,16 @@ export default function PanelSlider({
   }
 
   function handleMove(e) {
+    const touchPosition = e.touches[0].clientX;
+    if (scrollStart === 0 && touchPosition > touchStart) {
+      decrementCurrent();
+    }
     if (
-      scrollStart === 0 ||
       scrollStart ===
-        windowRef.current.scrollWidth - windowRef.current.clientWidth
+        windowRef.current.scrollWidth - windowRef.current.clientWidth &&
+      touchPosition < touchStart
     ) {
-      const touchPosition = e.touches[0].clientX;
-      if (touchPosition > touchStart) {
-        decrementCurrent();
-      }
-      if (touchPosition < touchStart) {
-        incrementCurrent();
-      }
+      incrementCurrent();
     }
   }
 
@@ -68,11 +67,7 @@ export default function PanelSlider({
             onTouchStart={handleTouchStart}
             onTouchMove={handleMove}
           >
-            <img
-              className={`panel-img`}
-              src={pagePanels[currentPanel].src}
-              alt=""
-            />
+            <img className={`panel-img`} src={source} alt="" />
           </div>
           <button
             className="invisibutton next-panel"
