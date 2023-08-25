@@ -13,6 +13,7 @@ export default function PanelSlider({
   pagePanels,
   incrementCurrent,
   decrementCurrent,
+  closeSlider,
 }) {
   // const panelList = pageOnePanels.layout;
   const flex = useFlex();
@@ -20,10 +21,6 @@ export default function PanelSlider({
   let touchStart;
   let scrollStart;
   const source = pagePanels[currentPanel].src;
-
-  function closeSlider() {
-    sliderRef.current.close();
-  }
 
   function clickAway(e) {
     if (e.target.nodeName === "DIALOG" && !flex) {

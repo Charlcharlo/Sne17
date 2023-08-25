@@ -13,6 +13,11 @@ export default function ComicPage({ info, index }) {
     sliderRef.current.showModal();
   }
 
+  function closeSlider() {
+    sliderRef.current.close();
+    setCurrentPanel(0);
+  }
+
   function incrementCurrent() {
     if (currentPanel < info.panels.length - 1) {
       setCurrentPanel((prev) => {
@@ -75,6 +80,7 @@ export default function ComicPage({ info, index }) {
         pagePanels={info.panels}
         incrementCurrent={incrementCurrent}
         decrementCurrent={decrementCurrent}
+        closeSlider={closeSlider}
       />
     </div>
   );
