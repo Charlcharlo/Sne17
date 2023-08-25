@@ -19,7 +19,8 @@
 }
 
 .title-sub {
-  color: antiquewhite;
+  color: var(--white-blue);
+  text-align: center;
   font-size: 50px;
   animation: fade-in 1000ms;
 }

@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { useLangSelected } from "../../Context/LanguageContext";
 import { useScroll } from "../../Context/ScrollContext";
-import Hamburger from "../../Assets/Icons/Hamburger";
 import Invisibutton from "../../Assets/Invisibutton/Invisibutton";
 import JumpToPage from "../JumpToPage/JumpToPage";
 import SideBar from "../SideBar/SideBar";
 import "./NavBar.css";
+import HamburgerH from "../../Assets/Icons/HamburgerH";
 
 export default function NavBar() {
   const scrollHeight = useScroll();
@@ -67,7 +67,7 @@ export default function NavBar() {
               onClick={togglePanel}
               buttonRef={buttonRef}
             >
-              <Hamburger refProp={svgRef} />
+              <HamburgerH />
             </Invisibutton>
           )}
         </div>

@@ -4,9 +4,10 @@
 }
 
 .jtp-input {
+  font-family: var(--body-font);
+  text-align: center;
   width: 100%;
   padding: 10px;
-  /* border-radius: 10px; */
   border: none;
   background-color: var(--med-blue);
   box-shadow: 0 0 4px var(--black-blue) inset;
@@ -15,12 +16,10 @@
 
 .jtp-input::placeholder {
   color: #aec6ce;
-  text-align: center;
   transition: 300ms ease-in;
 }
 
 .jtp-input:focus::placeholder {
-  text-align: left;
   color: var(--med-blue);
 }
 
@@ -67,8 +66,8 @@
   background-color: var(--med-blue);
   border: 1px solid var(--darker-blue);
   padding: 10px;
+  font-family: var(--body-font);
   color: var(--white-blue);
-  text-align: left;
   transition: 200ms;
 }
 

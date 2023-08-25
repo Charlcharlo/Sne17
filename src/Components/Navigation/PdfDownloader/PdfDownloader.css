@@ -5,6 +5,7 @@
   font-weight: 800;
   color: var(--white-blue);
   text-shadow: 1px 1px 1px black;
+  font-family: var(--title-font);
 }
 
 .pdf-button:hover {
@@ -12,7 +13,7 @@
 }
 
 .pdf-button > svg {
-  height: 32px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
   filter: drop-shadow(1px 1px 1px black);
 }

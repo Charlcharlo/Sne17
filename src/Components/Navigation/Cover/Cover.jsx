@@ -20,7 +20,7 @@ export default function Cover({ coverRef }) {
         {langSelected && (
           <h1 className={`title-sub`}>
             {lang === "en"
-              ? "And the 17th Symbol"
+              ? "And the 17 Symbols"
               : lang === "zl"
               ? "Kanye nophawu lwe-17"
               : ""}

@@ -1,4 +1,4 @@
-import Download from "../../Assets/Icons/Download";
+import DownloadH from "../../Assets/Icons/DownloadHand";
 import "./PdfDownloader.css";
 
 export default function PdfDownloader() {
@@ -19,7 +19,7 @@ export default function PdfDownloader() {
   return (
     <button className="pdf-button row-center" onClick={onButtonClick}>
       <p>Download PDF</p>
-      <Download />
+      <DownloadH />
     </button>
   );
 }

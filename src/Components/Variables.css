@@ -14,4 +14,17 @@
 
   --dark-shadow: 0 0 6px var(--black-blue);
   --dark-shadow-left: -4px 0px 4px var(--black-blue);
+
+  --title-font: komika-title;
+  --body-font: komika-text;
+}
+
+@font-face {
+  font-family: "komika-title";
+  src: url("../fonts/KOMTITA_.ttf");
+}
+
+@font-face {
+  font-family: "komika-text";
+  src: url("../fonts/komika_text/KOMTXT__.ttf");
 }
