@@ -1,9 +1,9 @@
-import "./LangButtons.css";
+import "./LangSelect.css";
 import { useLang, useLangUpdate } from "../../Context/LanguageContext";
 import { useSetInitial } from "../../Context/InitialContext";
 import Check from "../../Assets/Icons/Check";
 
-export default function LangButtons() {
+export default function LangSelect() {
   const updateLang = useLangUpdate();
   const lang = useLang();
   const setInitial = useSetInitial();

@@ -26,29 +26,6 @@
   opacity: 0;
 }
 
-.panel-section .lang-selector > div,
-.panel-section .lang-selector > input:checked + div {
-  align-items: center;
-  background-color: transparent;
-  border: none;
-  padding: 5px 0;
-  font-weight: 400;
-  font-size: 16px;
-  box-shadow: none;
-}
-
-.panel-section .lang-selector > input + div > svg {
-  display: block;
-  visibility: hidden;
-  height: 15px;
-  width: 15px;
-  margin-right: 10px;
-}
-
-.panel-section .lang-selector > input:checked + div > svg {
-  visibility: visible;
-}
-
 .panel-link {
   color: var(--white-blue);
   text-decoration: none;

@@ -1,0 +1,23 @@
+.lang-selector input {
+  display: none;
+}
+
+.lang-selector > div {
+  align-items: center;
+  padding: 5px 0;
+  font-weight: 400;
+  font-size: 16px;
+  box-shadow: none;
+}
+
+.lang-selector > input + div > svg {
+  display: block;
+  visibility: hidden;
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+.lang-selector > input:checked + div > svg {
+  visibility: visible;
+}
