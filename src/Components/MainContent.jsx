@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useLangSelected } from "./Context/LanguageContext";
-import Cover from "./Navigation/Cover/Cover";
+import Cover from "./CoverPage/Cover/Cover";
 import InfiniteScroll from "./Pages/InfiniteScroll/InfiniteScroll";
 import NavBar from "./Navigation/NavBar/NavBar";
 

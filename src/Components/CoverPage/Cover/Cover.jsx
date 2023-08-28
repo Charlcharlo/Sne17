@@ -1,5 +1,5 @@
 import { useLang, useLangSelected } from "../../Context/LanguageContext";
-import LangButtons from "../LangButtons/LangButtons";
+import LangStamp from "../LangStamp/LangStamp";
 import PdfDownloader from "../PdfDownloader/PdfDownloader";
 import "./Cover.css";
 
@@ -28,11 +28,16 @@ export default function Cover({ coverRef }) {
         )}
         {!langSelected && (
           <div className="row-center lang-container">
-            <LangButtons />
+            <LangStamp />
           </div>
         )}
       </div>
-      {langSelected && <PdfDownloader />}
+      {langSelected && (
+        <div>
+          <h2>Scroll to start reading</h2>
+          <PdfDownloader />
+        </div>
+      )}
     </div>
   );
 }
