@@ -72,6 +72,7 @@ export const panelSchema = {
 export const panelBookPH = {
   pages: [
     {
+      title: "page 1",
       type: "comic",
       panels: [
         {
@@ -101,6 +102,7 @@ export const panelBookPH = {
       ],
     },
     {
+      title: "page 2",
       type: "comic",
       panels: [
         {
@@ -134,6 +136,7 @@ export const panelBookPH = {
       ],
     },
     {
+      title: "page 3",
       type: "comic",
       panels: [
         {
@@ -151,6 +154,7 @@ export const panelBookPH = {
       ],
     },
     {
+      title: "page 4",
       type: "comic",
       panels: [
         {
@@ -172,6 +176,142 @@ export const panelBookPH = {
       ],
     },
     {
+      title: "page 5",
+      type: "comic",
+      panels: [
+        {
+          cols: 6,
+          rows: 6,
+        },
+        {
+          cols: 6,
+          rows: 3,
+        },
+        {
+          cols: 6,
+          rows: 3,
+        },
+        {
+          cols: 12,
+          rows: 3,
+        },
+        {
+          cols: 12,
+          rows: 3,
+        },
+      ],
+    },
+  ],
+};
+
+export const panelBookZL = {
+  pages: [
+    {
+      title: "iKhasi 1",
+      type: "comic",
+      panels: [
+        {
+          cols: 4,
+          rows: 4,
+        },
+        {
+          cols: 4,
+          rows: 4,
+        },
+        {
+          cols: 4,
+          rows: 4,
+        },
+        {
+          cols: 6,
+          rows: 4,
+        },
+        {
+          cols: 6,
+          rows: 4,
+        },
+        {
+          cols: 12,
+          rows: 4,
+        },
+      ],
+    },
+    {
+      title: "iKhasi 2",
+      type: "comic",
+      panels: [
+        {
+          cols: 3,
+          rows: 4,
+        },
+        {
+          cols: 3,
+          rows: 4,
+        },
+        {
+          cols: 6,
+          rows: 4,
+        },
+        {
+          cols: 9,
+          rows: 4,
+        },
+        {
+          cols: 3,
+          rows: 4,
+        },
+        {
+          cols: 3,
+          rows: 4,
+        },
+        {
+          cols: 9,
+          rows: 4,
+        },
+      ],
+    },
+    {
+      title: "iKhasi 3",
+      type: "comic",
+      panels: [
+        {
+          cols: 8,
+          rows: 4,
+        },
+        {
+          cols: 4,
+          rows: 4,
+        },
+        {
+          cols: 12,
+          rows: 8,
+        },
+      ],
+    },
+    {
+      title: "iKhasi 4",
+      type: "comic",
+      panels: [
+        {
+          cols: 6,
+          rows: 3,
+        },
+        {
+          cols: 6,
+          rows: 3,
+        },
+        {
+          cols: 12,
+          rows: 3,
+        },
+        {
+          cols: 12,
+          rows: 6,
+        },
+      ],
+    },
+    {
+      title: "iKhasi 5",
       type: "comic",
       panels: [
         {

@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { scottPilgrim } from "../../../Data/testPages";
+import { useBook } from "../../Context/BookContext";
 import { useSetInitial } from "../../Context/InitialContext";
 import { useSetOffset } from "../../Context/OffsetContext";
 import "./JumpToPage.css";
 
 export default function JumpToPage() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState(scottPilgrim.pages);
+  const book = useBook();
+  const [results, setResults] = useState(book);
   const setOffset = useSetOffset();
   const setInitial = useSetInitial();
 
@@ -21,7 +22,7 @@ export default function JumpToPage() {
 
   useEffect(() => {
     const results = [];
-    scottPilgrim.pages.forEach((element) => {
+    book.forEach((element) => {
       if (element.title.includes(query)) {
         results.push(element);
       }

@@ -1,22 +1,19 @@
 import "./InfiniteScroll.css";
 import { useEffect, useState } from "react";
-// import { placeholder, placeholderZl } from "../../Data/testPages";
-// import { useLang } from "../Context/LanguageContext";
 import { useScroll } from "../../Context/ScrollContext";
 import BookViewer from "./BookViewer";
 import { useOffset } from "../../Context/OffsetContext";
 import { useInitial } from "../../Context/InitialContext";
 import PageNavigation from "../PageNavigation/PageNavigation";
-import { scottPilgrim } from "../../../Data/testPages";
+import { useBook } from "../../Context/BookContext";
 
 export default function InfiniteScroll({ coverRef }) {
   const [current, setCurrent] = useState(1);
-  const [book, setBook] = useState(scottPilgrim.pages);
+  const book = useBook();
   const [pages, setPages] = useState([]);
   const [ready, setReady] = useState(false);
   const [stackHeight, setStackHeight] = useState(0);
   const scrollPosition = useScroll();
-  // const lang = useLang();
   const offset = useOffset();
   const initial = useInitial();
 
@@ -36,11 +33,8 @@ export default function InfiniteScroll({ coverRef }) {
     }
   }, [coverRef, scrollPosition, stackHeight]);
 
-  // useEffect(() => {
-  //   setBook(lang === "zl" ? placeholderZl : placeholder);
-  // }, [lang]);
-
   useEffect(() => {
+    console.log(book);
     const array = [];
     for (
       let index = offset;

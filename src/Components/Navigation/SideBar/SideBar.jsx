@@ -1,6 +1,6 @@
 import ClickAwayListener from "react-click-away-listener";
 import LangButtons from "../LangButtons/LangButtons";
-import PdfDownloader from "../PdfDownloader/PdfDownloader";
+import PdfDownloader from "../../CoverPage/PdfDownloader/PdfDownloader";
 import "./SideBar.css";
 
 export default function SideBar({ hidden, hidePanel }) {

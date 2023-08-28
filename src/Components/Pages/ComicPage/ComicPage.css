@@ -10,6 +10,10 @@
   box-shadow: var(--dark-shadow);
 }
 
+.panel-multi .invisibutton {
+  border: 2px solid var(--black-blue);
+}
+
 .clickable-panel {
   width: 100%;
   height: 100%;

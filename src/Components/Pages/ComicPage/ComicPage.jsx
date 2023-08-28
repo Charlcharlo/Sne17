@@ -64,7 +64,7 @@ export default function ComicPage({ info, index }) {
           showSlider(e.currentTarget.value);
         }}
       >
-        <img className="clickable-panel" src={panel.src} alt="" />
+        <img className="clickable-panel" src={panel.src} alt={`Panel ${i}`} />
       </button>
     );
   }

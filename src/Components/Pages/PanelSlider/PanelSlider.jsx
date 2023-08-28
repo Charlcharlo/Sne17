@@ -23,7 +23,13 @@ export default function PanelSlider({
   const source = pagePanels[currentPanel].src;
 
   function clickAway(e) {
-    if (e.target.nodeName === "DIALOG" && !flex) {
+    console.log(e.target.nodeName);
+    if (
+      !flex &&
+      e.target.nodeName !== "BUTTON" &&
+      e.target.nodeName !== "IMG" &&
+      e.target.nodeName !== "DIV"
+    ) {
       windowRef.current.scroll(0, 0);
       sliderRef.current.close();
     }

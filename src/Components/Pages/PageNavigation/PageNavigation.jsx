@@ -45,7 +45,7 @@ export default function PageNavigation() {
           }
           alt=""
         />
-        <p>Show Previous Page</p>
+        <p>Previous Page</p>
       </button>
     </div>
   );

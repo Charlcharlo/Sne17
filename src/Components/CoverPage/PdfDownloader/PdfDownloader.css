@@ -1,0 +1,19 @@
+.pdf-button {
+  background-color: transparent;
+  border: none;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--white-blue);
+  text-shadow: 1px 1px 1px black;
+  font-family: var(--title-font);
+}
+
+.pdf-button:hover {
+  color: var(--white-yellow);
+}
+
+.pdf-button > svg {
+  height: 40px;
+  width: 40px;
+  filter: drop-shadow(1px 1px 1px black);
+}

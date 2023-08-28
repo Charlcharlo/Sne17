@@ -6,19 +6,22 @@ import LangProvider from "./Context/LanguageContext";
 import OffsetProvider from "./Context/OffsetContext";
 import ScrollProvider from "./Context/ScrollContext";
 import MainContent from "./MainContent";
+import BookProvider from "./Context/BookContext";
 
 function App() {
   return (
     <LangProvider>
-      <ScrollProvider>
-        <FlexProvider>
-          <OffsetProvider>
-            <InitialProvider>
-              <MainContent />
-            </InitialProvider>
-          </OffsetProvider>
-        </FlexProvider>
-      </ScrollProvider>
+      <BookProvider>
+        <ScrollProvider>
+          <FlexProvider>
+            <OffsetProvider>
+              <InitialProvider>
+                <MainContent />
+              </InitialProvider>
+            </OffsetProvider>
+          </FlexProvider>
+        </ScrollProvider>
+      </BookProvider>
     </LangProvider>
   );
 }
