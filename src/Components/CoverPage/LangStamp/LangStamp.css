@@ -1,6 +1,6 @@
 .lang-stamp {
   gap: 0;
-  outline: 4px solid var(--black-blue);
+  outline: var(--black-border);
 }
 
 .stamp-button {
@@ -9,7 +9,7 @@
   background-color: var(--black-blue);
   color: var(--white-blue);
   font-family: var(--title-font);
-  border: 2px solid var(--white-blue);
+  border: var(--white-border);
   font-size: 25px;
   padding: 0 10px;
 }

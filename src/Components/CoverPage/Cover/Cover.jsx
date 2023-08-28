@@ -1,6 +1,6 @@
 import { useLang, useLangSelected } from "../../Context/LanguageContext";
 import LangStamp from "../LangStamp/LangStamp";
-import PdfDownloader from "../PdfDownloader/PdfDownloader";
+import ReadingOptions from "../ReadingOptions/ReadingOptions";
 import "./Cover.css";
 
 export default function Cover({ coverRef }) {
@@ -32,12 +32,7 @@ export default function Cover({ coverRef }) {
           </div>
         )}
       </div>
-      {langSelected && (
-        <div>
-          <h2>Scroll to start reading</h2>
-          <PdfDownloader />
-        </div>
-      )}
+      {langSelected && <ReadingOptions />}
     </div>
   );
 }

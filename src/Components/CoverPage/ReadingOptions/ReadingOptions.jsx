@@ -1,0 +1,18 @@
+import "./ReadingOptions.css";
+import PdfDownloader from "../../Assets/PdfDownloader/PdfDownloader";
+import DownArrow from "../../Assets/Icons/DownArrow";
+
+export default function ReadingOptions() {
+  return (
+    <div className="reading-options col-start">
+      <PdfDownloader />
+      <h2 className="scroll-title">Start reading</h2>
+      <div className="down-arrow">
+        <DownArrow />
+      </div>
+      {/* <div className="down-arrow-border">
+        <div className="down-arrow" />
+      </div> */}
+    </div>
+  );
+}

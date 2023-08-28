@@ -17,6 +17,9 @@
   --dark-shadow: 0 0 6px var(--black-blue);
   --dark-shadow-left: -4px 0px 4px var(--black-blue);
 
+  --white-border: 2px solid var(--white-blue);
+  --black-border: 2px solid var(--black-blue);
+
   --title-font: komika-title;
   --body-font: komika-text;
 }
