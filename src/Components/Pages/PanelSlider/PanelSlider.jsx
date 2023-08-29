@@ -70,7 +70,12 @@ export default function PanelSlider({
             onTouchStart={handleTouchStart}
             onTouchMove={handleMove}
           >
-            <img className={`panel-img`} src={source} alt="" />
+            <img
+              className={`panel-img`}
+              // src={source}
+              src={`${window.location.origin}/Images/PH-Block.png`}
+              alt=""
+            />
           </div>
           <button
             className="invisibutton next-panel"

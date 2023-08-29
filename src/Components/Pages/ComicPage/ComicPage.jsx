@@ -54,17 +54,19 @@ export default function ComicPage({ info, index }) {
     return (
       <button
         className="invisibutton"
-        style={{
-          gridColumn: `span ${panel.cols}`,
-          gridRow: `span ${panel.rows}`,
-        }}
+        style={{ ...panel.style, zIndex: info.panels.length - i }}
         key={i}
         value={i}
         onClick={(e) => {
           showSlider(e.currentTarget.value);
         }}
       >
-        <img className="clickable-panel" src={panel.src} alt={`Panel ${i}`} />
+        <img
+          className="clickable-panel ph"
+          // src={panel.src}
+          src={`${window.location.origin}/Images/PH-Block.png`}
+          alt={`Panel ${i}`}
+        />
       </button>
     );
   }

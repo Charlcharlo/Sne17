@@ -34,7 +34,6 @@ export default function InfiniteScroll({ coverRef }) {
   }, [coverRef, scrollPosition, stackHeight]);
 
   useEffect(() => {
-    console.log(book);
     const array = [];
     for (
       let index = offset;

@@ -6,6 +6,8 @@ import JumpToPage from "../JumpToPage/JumpToPage";
 import SideBar from "../SideBar/SideBar";
 import "./NavBar.css";
 import HamburgerH from "../../Assets/Icons/HamburgerH";
+import Symbol17 from "../../Assets/Icons/Symbol17";
+import { useFlex } from "../../Context/FlexContext";
 
 export default function NavBar() {
   const scrollHeight = useScroll();
@@ -13,6 +15,7 @@ export default function NavBar() {
   const [hidden, setHidden] = useState(false);
   const [panelHidden, setPanelHidden] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const flex = useFlex();
   const buttonRef = useRef();
   const svgRef = useRef();
 
@@ -52,12 +55,14 @@ export default function NavBar() {
     <>
       <nav className={`row-between nav-bar ${hidden ? "hidden" : "shown"}`}>
         <button className="invisibutton" onClick={scrollTop}>
-          {" "}
-          <img
-            className="nav-title-img"
-            src={`${window.location.origin}/Sne17/Images/Sne-title.png`}
-            alt=""
-          />
+          <Symbol17 />
+          {!flex && (
+            <img
+              className="nav-title-img"
+              src={`${window.location.origin}/Sne17/Images/Sne-title.png`}
+              alt=""
+            />
+          )}
         </button>
         {langSelected && <JumpToPage />}
         <div className="row-end">

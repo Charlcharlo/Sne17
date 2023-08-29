@@ -61,10 +61,14 @@ export const pageSchema = {
 };
 
 export const panelSchema = {
-  cols: Number, // from 1 to 12
-  rows: Number, // from 1 to 12
-  final: Boolean, //May be useful to go to next page
   src: String, //url
+  style: {
+    gridColumnStart: Number,
+    gridColumnEnd: Number,
+    gridRowStart: Number,
+    gridRowEnd: Number,
+    zIndex: Number, //or Null
+  },
 };
 
 //Placeholder 2
@@ -76,28 +80,58 @@ export const panelBookPH = {
       type: "comic",
       panels: [
         {
-          cols: 4,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 5,
+            gridRowStart: 1,
+            gridRowEnd: 5,
+          },
         },
         {
-          cols: 4,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 5,
+            gridColumnEnd: 9,
+            gridRowStart: 1,
+            gridRowEnd: 5,
+          },
         },
         {
-          cols: 4,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 9,
+            gridColumnEnd: 13,
+            gridRowStart: 1,
+            gridRowEnd: 6,
+          },
         },
         {
-          cols: 6,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 7,
+            gridRowStart: 5,
+            gridRowEnd: 9,
+          },
         },
         {
-          cols: 6,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 7,
+            gridColumnEnd: 13,
+            gridRowStart: 5,
+            gridRowEnd: 9,
+          },
         },
         {
-          cols: 12,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 13,
+            gridRowStart: 9,
+            gridRowEnd: 13,
+          },
         },
       ],
     },
@@ -106,32 +140,58 @@ export const panelBookPH = {
       type: "comic",
       panels: [
         {
-          cols: 3,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 5,
+            gridRowStart: 1,
+            gridRowEnd: 5,
+          },
         },
         {
-          cols: 3,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 5,
+            gridColumnEnd: 9,
+            gridRowStart: 1,
+            gridRowEnd: 5,
+          },
         },
         {
-          cols: 6,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 9,
+            gridColumnEnd: 13,
+            gridRowStart: 1,
+            gridRowEnd: 6,
+          },
         },
         {
-          cols: 9,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 7,
+            gridRowStart: 5,
+            gridRowEnd: 9,
+          },
         },
         {
-          cols: 3,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 7,
+            gridColumnEnd: 13,
+            gridRowStart: 5,
+            gridRowEnd: 9,
+          },
         },
         {
-          cols: 3,
-          rows: 4,
-        },
-        {
-          cols: 9,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 13,
+            gridRowStart: 9,
+            gridRowEnd: 13,
+          },
         },
       ],
     },
@@ -140,16 +200,58 @@ export const panelBookPH = {
       type: "comic",
       panels: [
         {
-          cols: 8,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 5,
+            gridRowStart: 1,
+            gridRowEnd: 5,
+          },
         },
         {
-          cols: 4,
-          rows: 4,
+          src: "",
+          style: {
+            gridColumnStart: 5,
+            gridColumnEnd: 9,
+            gridRowStart: 1,
+            gridRowEnd: 5,
+          },
         },
         {
-          cols: 12,
-          rows: 8,
+          src: "",
+          style: {
+            gridColumnStart: 9,
+            gridColumnEnd: 13,
+            gridRowStart: 1,
+            gridRowEnd: 6,
+          },
+        },
+        {
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 7,
+            gridRowStart: 5,
+            gridRowEnd: 9,
+          },
+        },
+        {
+          src: "",
+          style: {
+            gridColumnStart: 7,
+            gridColumnEnd: 13,
+            gridRowStart: 5,
+            gridRowEnd: 9,
+          },
+        },
+        {
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 13,
+            gridRowStart: 9,
+            gridRowEnd: 13,
+          },
         },
       ],
     },
@@ -158,46 +260,58 @@ export const panelBookPH = {
       type: "comic",
       panels: [
         {
-          cols: 6,
-          rows: 3,
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 5,
+            gridRowStart: 1,
+            gridRowEnd: 5,
+          },
         },
         {
-          cols: 6,
-          rows: 3,
+          src: "",
+          style: {
+            gridColumnStart: 5,
+            gridColumnEnd: 9,
+            gridRowStart: 1,
+            gridRowEnd: 5,
+          },
         },
         {
-          cols: 12,
-          rows: 3,
+          src: "",
+          style: {
+            gridColumnStart: 9,
+            gridColumnEnd: 13,
+            gridRowStart: 1,
+            gridRowEnd: 6,
+          },
         },
         {
-          cols: 12,
-          rows: 6,
-        },
-      ],
-    },
-    {
-      title: "page 5",
-      type: "comic",
-      panels: [
-        {
-          cols: 6,
-          rows: 6,
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 7,
+            gridRowStart: 5,
+            gridRowEnd: 9,
+          },
         },
         {
-          cols: 6,
-          rows: 3,
+          src: "",
+          style: {
+            gridColumnStart: 7,
+            gridColumnEnd: 13,
+            gridRowStart: 5,
+            gridRowEnd: 9,
+          },
         },
         {
-          cols: 6,
-          rows: 3,
-        },
-        {
-          cols: 12,
-          rows: 3,
-        },
-        {
-          cols: 12,
-          rows: 3,
+          src: "",
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 13,
+            gridRowStart: 9,
+            gridRowEnd: 13,
+          },
         },
       ],
     },
