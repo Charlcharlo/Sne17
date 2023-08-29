@@ -8,6 +8,10 @@
   height: 100%;
 }
 
+.invisibutton-wrapper {
+  transition: 300ms;
+}
+
 .invisibutton-wrapper svg {
   height: 30px;
   width: 30px;

@@ -6,7 +6,7 @@
   --white-blue: #f9fbff;
 
   --med-green: #2bbeb0;
-  --hl-green: #68c4ba;
+  --hl-green: #26e4ce;
   --darker-green: #3c7288;
   --gray-green: #566266;
 
@@ -22,6 +22,7 @@
 
   --title-font: komika-title;
   --body-font: komika-text;
+  --cover-font: the-bold-font;
 }
 
 @font-face {
@@ -32,4 +33,9 @@
 @font-face {
   font-family: "komika-text";
   src: url("../fonts/komika_text/KOMTXT__.ttf");
+}
+
+@font-face {
+  font-family: "the-bold-font";
+  src: url("../fonts/the_bold_font/THEBOLDFONT.ttf");
 }

@@ -18,15 +18,36 @@
   width: 1000px;
 }
 
+.sub-header {
+  padding: 0 30px;
+  width: 100%;
+}
+
 .title-sub {
   color: var(--white-blue);
-  text-align: center;
+  font-family: var(--cover-font);
   font-size: 50px;
   animation: fade-in 1000ms;
 }
 
 .lang-container {
   padding-top: 60px;
+}
+
+.cover-page .pdf-button {
+  background-color: var(--black-blue);
+  padding: 10px 20px;
+  outline: var(--black-border);
+  border: var(--white-border);
+  font-family: var(--cover-font);
+  flex-direction: column-reverse;
+  height: max-content;
+}
+
+.cover-page .pdf-button:hover {
+  /* background-color: var(--med-green); */
+  /* color: var(--white-blue); */
+  border: 2px solid var(--hl-green);
 }
 
 @keyframes fade-in {
@@ -46,5 +67,15 @@
 
   .title-sub {
     font-size: 36px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sub-header {
+    padding: 10px 20px;
+  }
+
+  .title-sub {
+    font-size: 24px;
   }
 }

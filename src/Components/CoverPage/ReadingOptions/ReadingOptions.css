@@ -1,10 +1,3 @@
-.reading-options .pdf-button {
-  background-color: var(--black-blue);
-  padding: 10px 20px;
-  outline: var(--black-border);
-  border: var(--white-border);
-}
-
 .scroll-title {
   color: var(--white-blue);
   text-shadow: 1px 1px 1px var(--black-blue);
@@ -12,7 +5,7 @@
 }
 
 .down-arrow {
-  color: var(--med-blue);
+  color: #e78c06;
   /* height: 50px; */
   /* filter: drop-shadow(var(--dark-shadow)); */
 }

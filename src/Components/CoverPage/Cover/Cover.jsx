@@ -1,3 +1,4 @@
+import PdfDownloader from "../../Assets/PdfDownloader/PdfDownloader";
 import { useLang, useLangSelected } from "../../Context/LanguageContext";
 import LangStamp from "../LangStamp/LangStamp";
 import ReadingOptions from "../ReadingOptions/ReadingOptions";
@@ -18,13 +19,16 @@ export default function Cover({ coverRef }) {
           />
         </div>
         {langSelected && (
-          <h1 className={`title-sub`}>
-            {lang === "en"
-              ? "And the 17 Symbols"
-              : lang === "zl"
-              ? "Kanye nophawu lwe-17"
-              : ""}
-          </h1>
+          <div className="row-between sub-header">
+            <h1 className={`title-sub`}>
+              {lang === "en"
+                ? "And the 17 Symbols"
+                : lang === "zl"
+                ? "Kanye nophawu lwe-17"
+                : ""}
+            </h1>
+            <PdfDownloader />
+          </div>
         )}
         {!langSelected && (
           <div className="row-center lang-container">

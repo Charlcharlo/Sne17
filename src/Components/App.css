@@ -19,6 +19,7 @@ h4 {
 button,
 a {
   cursor: pointer;
+  transition: 300ms;
 }
 
 /* Flex Containers */
