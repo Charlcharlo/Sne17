@@ -80,7 +80,7 @@ export default function PanelSlider({
             data-slide={slide}
             className={`panel-img`}
             // src={source}
-            src={`${window.location.origin}/Images/PH-Block.png`}
+            src={`${window.location.origin}/Sne17/Images/PH-Block.png`}
             alt=""
           />
         </div>
