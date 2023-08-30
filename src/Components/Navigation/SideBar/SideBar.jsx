@@ -16,10 +16,20 @@ export default function SideBar({ hidden, hidePanel }) {
           <a className="panel-link" href="">
             About the author
           </a>
-          <a className="panel-link" href="">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="panel-link"
+            href="https://www.durban.gov.za/"
+          >
             Ethekweni Strathub
           </a>
-          <a className="panel-link" href="">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="panel-link"
+            href="https://strathub.durban.gov.za/"
+          >
             Ethekweni Municipality
           </a>
         </div>
