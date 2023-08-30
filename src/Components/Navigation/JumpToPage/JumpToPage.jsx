@@ -7,7 +7,7 @@ import "./JumpToPage.css";
 export default function JumpToPage() {
   const [query, setQuery] = useState("");
   const book = useBook();
-  const [results, setResults] = useState(book);
+  const [results, setResults] = useState([]);
   const setOffset = useSetOffset();
   const setInitial = useSetInitial();
 
@@ -28,8 +28,7 @@ export default function JumpToPage() {
       }
       setResults(results);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
+  }, [query, book]);
 
   function renderOptions(option, i) {
     return (
