@@ -2,6 +2,8 @@
   height: 100vh;
   background-image: url(/public/Images/Sne-cover.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   gap: 20px;
   padding: 20px;
   padding-top: 80px;
@@ -77,5 +79,14 @@
 
   .title-sub {
     font-size: 24px;
+  }
+
+  .cover-page .pdf-button {
+    padding: 10px;
+  }
+
+  .cover-page .pdf-button svg {
+    height: 30px;
+    width: 30px;
   }
 }
