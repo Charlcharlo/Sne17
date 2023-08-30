@@ -33,6 +33,14 @@
   max-width: 100%;
 }
 
+.panel-img[data-slide="to-right"] {
+  animation: slide-right 300ms ease-in;
+}
+
+.panel-img[data-slide="to-left"] {
+  animation: slide-left 300ms ease-in;
+}
+
 .panel-modal {
   position: fixed;
   left: 0;
@@ -41,6 +49,7 @@
   background-color: transparent;
   border: none;
   max-height: 100%;
+  min-width: 1200px;
 }
 
 ::backdrop {
@@ -85,4 +94,24 @@
     left: 0;
     z-index: 5;
   } */
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }

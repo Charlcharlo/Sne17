@@ -2,7 +2,7 @@ import "./PanelSlider.css";
 import Cancel from "../../Assets/Icons/Cancel";
 import Next from "../../Assets/Icons/Next";
 import Prev from "../../Assets/Icons/Prev";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function PanelSlider({
   // currentPanel,
@@ -11,11 +11,31 @@ export default function PanelSlider({
   incrementCurrent,
   decrementCurrent,
   closeSlider,
+  removeAnimation,
+  slide,
 }) {
   const windowRef = useRef();
   let touchStart;
   let scrollStart;
   // const source = pagePanels[currentPanel].src;
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeydown);
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+    };
+  });
+
+  function handleKeydown(e) {
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      incrementCurrent();
+    }
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      decrementCurrent();
+    }
+  }
 
   function clickAway(e) {
     if (e.target === sliderRef.current) {
@@ -54,8 +74,10 @@ export default function PanelSlider({
           ref={windowRef}
           onTouchStart={handleTouchStart}
           onTouchMove={handleMove}
+          onAnimationEnd={removeAnimation}
         >
           <img
+            data-slide={slide}
             className={`panel-img`}
             // src={source}
             src={`${window.location.origin}/Images/PH-Block.png`}

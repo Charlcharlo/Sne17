@@ -4,6 +4,7 @@ import "./ComicPage.css";
 
 export default function ComicPage({ info, index }) {
   const [currentPanel, setCurrentPanel] = useState(0);
+  const [slide, setSlide] = useState("");
   const pageRef = useRef();
   const sliderRef = useRef();
 
@@ -23,6 +24,7 @@ export default function ComicPage({ info, index }) {
       setCurrentPanel((prev) => {
         return prev + 1;
       });
+      setSlide("to-left");
     } else {
       const iPlusOne = index + 1;
       const nextPage = document.getElementById(`page-${iPlusOne}`);
@@ -39,6 +41,7 @@ export default function ComicPage({ info, index }) {
       setCurrentPanel((prev) => {
         return prev - 1;
       });
+      setSlide("to-right");
     } else {
       const iMinusOne = index - 1;
       const prevPage = document.getElementById(`page-${iMinusOne}`);
@@ -48,6 +51,10 @@ export default function ComicPage({ info, index }) {
         prevPage.scrollIntoView({ behavior: "smooth" });
       }
     }
+  }
+
+  function removeAnimation() {
+    setSlide("");
   }
 
   function renderPanels(panel, i) {
@@ -83,6 +90,8 @@ export default function ComicPage({ info, index }) {
         incrementCurrent={incrementCurrent}
         decrementCurrent={decrementCurrent}
         closeSlider={closeSlider}
+        removeAnimation={removeAnimation}
+        slide={slide}
       />
     </div>
   );
