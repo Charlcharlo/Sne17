@@ -1,10 +1,11 @@
 import { useRef, useState } from "react";
-import PanelSlider from "../PanelSlider/PanelSlider";
+import PanelSliderSafari from "../PanelSliderSafari/PanelSliderSafari";
 import "./ComicPage.css";
 
-export default function ComicPage({ info, index }) {
+export default function ComicPageSafari({ info, index }) {
   const [currentPanel, setCurrentPanel] = useState(0);
   const [slide, setSlide] = useState("");
+  const [modalIn, setModalIn] = useState(false);
   const pageRef = useRef();
   const sliderRef = useRef();
   const windowRef = useRef();
@@ -12,12 +13,12 @@ export default function ComicPage({ info, index }) {
   function showSlider(index) {
     const num = parseInt(index);
     setCurrentPanel(num);
-    sliderRef.current.showModal();
+    setModalIn(true);
   }
 
   function closeSlider() {
-    sliderRef.current.close();
     setCurrentPanel(0);
+    setModalIn(false);
   }
 
   function incrementCurrent() {
@@ -30,7 +31,7 @@ export default function ComicPage({ info, index }) {
     } else {
       const iPlusOne = index + 1;
       const nextPage = document.getElementById(`page-${iPlusOne}`);
-      sliderRef.current.close();
+      setModalIn(false);
       setCurrentPanel(0);
       if (nextPage) {
         nextPage.scrollIntoView({ behavior: "smooth" });
@@ -48,7 +49,7 @@ export default function ComicPage({ info, index }) {
     } else {
       const iMinusOne = index - 1;
       const prevPage = document.getElementById(`page-${iMinusOne}`);
-      sliderRef.current.close();
+      setModalIn(false);
       setCurrentPanel(0);
       if (prevPage) {
         prevPage.scrollIntoView({ behavior: "smooth" });
@@ -86,7 +87,7 @@ export default function ComicPage({ info, index }) {
       <div className="panel-multi" ref={pageRef}>
         {info.panels.map(renderPanels)}
       </div>
-      <PanelSlider
+      <PanelSliderSafari
         currentPanel={currentPanel}
         sliderRef={sliderRef}
         pagePanels={info.panels}
@@ -95,10 +96,11 @@ export default function ComicPage({ info, index }) {
         closeSlider={closeSlider}
         removeAnimation={removeAnimation}
         slide={slide}
+        modalIn={modalIn}
         windowRef={windowRef}
       />
     </div>
   );
 }
 
-ComicPage.propTypes;
+ComicPageSafari.propTypes;

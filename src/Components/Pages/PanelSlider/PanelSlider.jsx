@@ -2,7 +2,7 @@ import "./PanelSlider.css";
 import Cancel from "../../Assets/Icons/Cancel";
 import Next from "../../Assets/Icons/Next";
 import Prev from "../../Assets/Icons/Prev";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export default function PanelSlider({
   // currentPanel,
@@ -13,8 +13,8 @@ export default function PanelSlider({
   closeSlider,
   removeAnimation,
   slide,
+  windowRef,
 }) {
-  const windowRef = useRef();
   let touchStart;
   let scrollStart;
   // const source = pagePanels[currentPanel].src;

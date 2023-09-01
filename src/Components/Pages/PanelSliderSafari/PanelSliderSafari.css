@@ -1,0 +1,29 @@
+.backdrop {
+  position: fixed;
+  z-index: 101;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(9, 12, 19, 0.2);
+}
+
+.panel-modal-saf {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1200px;
+  max-width: 100vw;
+  z-index: 102;
+}
+
+.panel-modal-saf .row-between {
+  width: 100%;
+}
+
+.panel-modal-saf .invisibutton {
+  color: white;
+}
