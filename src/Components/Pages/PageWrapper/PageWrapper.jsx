@@ -7,7 +7,10 @@ import "./PageWrapper.css";
 
 export default function PageWrapper({ source, id, firstPageRef, info, index }) {
   const isOldSafari = useMemo(() => {
-    return browserName === "Safari" && parseInt(browserVersion) < 16;
+    return (
+      (browserName === "Safari" || browserName === "Mobile Safari") &&
+      parseInt(browserVersion) < 16
+    );
   }, []);
   return (
     <section
