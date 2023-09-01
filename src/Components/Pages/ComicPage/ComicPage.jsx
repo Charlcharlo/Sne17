@@ -74,7 +74,7 @@ export default function ComicPage({ info, index }) {
         <img
           className="clickable-panel ph"
           // src={panel.src}
-          src={`${window.location.origin}/Images/PH-Block.png`}
+          src={`${window.location.origin}/Sne17/Images/PH-Block.png`}
           alt={`Panel ${i}`}
         />
       </button>
