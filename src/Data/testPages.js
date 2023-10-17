@@ -50,7 +50,7 @@ export const bookSchema = {
 };
 
 export const pageSchema = {
-  type: String, //comic or info
+  type: String, //comic, splash or info
   //comic properties
   panels: Array, //see panel object
   double: Boolean,

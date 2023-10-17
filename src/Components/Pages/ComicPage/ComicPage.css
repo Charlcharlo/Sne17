@@ -6,7 +6,7 @@
   grid-template: repeat(12, 8.33fr) / repeat(12, 8.33fr);
   gap: 10px;
   padding: 10px;
-  border: 2px solid black;
+  border: var(--black-border);
   box-shadow: var(--dark-shadow);
 }
 

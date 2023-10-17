@@ -64,7 +64,7 @@ export default function ComicPage({ info, index }) {
     return (
       <button
         className="invisibutton"
-        style={{ ...panel.style, zIndex: info.panels.length - i }}
+        style={panel.style}
         key={i}
         value={i}
         onClick={(e) => {
@@ -73,8 +73,8 @@ export default function ComicPage({ info, index }) {
       >
         <img
           className="clickable-panel ph"
-          // src={panel.src}
-          src={`${window.location.origin}/Sne17/Images/PH-Block.png`}
+          src={panel.src}
+          // src={`${window.location.origin}/Sne17/Images/PH-Block.png`}
           alt={`Panel ${i}`}
         />
       </button>

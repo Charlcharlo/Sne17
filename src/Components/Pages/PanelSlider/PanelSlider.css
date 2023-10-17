@@ -21,6 +21,17 @@
 .panel-window {
   align-items: center;
   max-height: 100%;
+  max-width: calc(100vw - 80px);
+  overflow-x: scroll;
+}
+
+.panel-window::-webkit-scrollbar {
+  background: transparent;
+}
+
+.panel-window::-webkit-scrollbar-thumb {
+  background: var(--main-blue);
+  border: var(--black-border);
 }
 
 .panel-img {

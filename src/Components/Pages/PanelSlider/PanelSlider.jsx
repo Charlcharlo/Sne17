@@ -5,9 +5,9 @@ import Prev from "../../Assets/Icons/Prev";
 import { useEffect } from "react";
 
 export default function PanelSlider({
-  // currentPanel,
+  currentPanel,
   sliderRef,
-  // pagePanels,
+  pagePanels,
   incrementCurrent,
   decrementCurrent,
   closeSlider,
@@ -17,7 +17,7 @@ export default function PanelSlider({
 }) {
   let touchStart;
   let scrollStart;
-  // const source = pagePanels[currentPanel].src;
+  const source = pagePanels[currentPanel].src;
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeydown);
@@ -79,8 +79,8 @@ export default function PanelSlider({
           <img
             data-slide={slide}
             className={`panel-img`}
-            // src={source}
-            src={`${window.location.origin}/Sne17/Images/PH-Block.png`}
+            src={source}
+            // src={`${window.location.origin}/Sne17/Images/PH-Block.png`}
             alt=""
           />
         </div>

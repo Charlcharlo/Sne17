@@ -4,3 +4,16 @@
   object-fit: contain;
   box-shadow: var(--dark-shadow);
 }
+
+.splash-page.portrait {
+  width: 100vw;
+  max-width: 1000px;
+  height: 1400px;
+  object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+  .splash-page.portrait {
+    height: 140vw;
+  }
+}

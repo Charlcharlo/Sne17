@@ -6,7 +6,7 @@ import ZoomOut from "../../Assets/Icons/ZoomOut";
 
 import "./ZoomWindow.css";
 
-export default function ZoomWindowCopy({ source }) {
+export default function ZoomWindowCopy({ source, orientation }) {
   const [zoom, setZoom] = useState(false);
   const ref = useRef();
   const imgRef = useRef();
@@ -52,11 +52,11 @@ export default function ZoomWindowCopy({ source }) {
       <div
         ref={ref}
         {...doubleTap}
-        className={`zoom-window ${zoom && "zoomed"}`}
+        className={`zoom-window ${zoom && "zoomed"} ${orientation}`}
       >
         <img className="page-img" ref={imgRef} src={source} />
         <div ref={backBoard} className="back-board" />
-        {!zoom && <h2 className="zoom-hint">Double Tap to Zoom</h2>}
+        {/* {!zoom && <h2 className="zoom-hint">Double Tap to Zoom</h2>} */}
       </div>
     </>
   );

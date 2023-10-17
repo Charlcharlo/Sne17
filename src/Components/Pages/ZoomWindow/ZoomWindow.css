@@ -5,6 +5,8 @@
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
   overflow-y: hidden;
   overflow-x: hidden;
+  border: var(--black-border);
+  box-shadow: var(--dark-shadow);
 }
 
 .zoom-window > .page-img {
@@ -14,6 +16,12 @@
   bottom: 0;
   margin: auto 0;
   transition: 300ms;
+}
+
+.zoom-window.portrait > .page-img {
+  top: 0;
+  left: 0;
+  margin: 0;
 }
 
 .zoom-window.zoomed {
