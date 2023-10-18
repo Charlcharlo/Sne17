@@ -65,10 +65,15 @@ export default function PanelSlider({
 
   return (
     <dialog className="panel-modal" ref={sliderRef} onClick={clickAway}>
-      <div className="row-between">
-        <button className="invisibutton prev-panel" onClick={decrementCurrent}>
-          <Prev />
-        </button>
+      <div className="col-between">
+        <div className="row-end">
+          <button
+            className="invisibutton cancel-button centered-container"
+            onClick={closeSlider}
+          >
+            <Cancel />
+          </button>
+        </div>
         <div
           className="panel-window"
           ref={windowRef}
@@ -84,12 +89,22 @@ export default function PanelSlider({
             alt=""
           />
         </div>
-        <button className="invisibutton next-panel" onClick={incrementCurrent}>
-          <Next />
-        </button>
-        <button className="invisibutton cancel-button" onClick={closeSlider}>
-          <Cancel />
-        </button>
+        <div className="row-center">
+          <div className="panel-nav-buttons">
+            <button
+              className="invisibutton prev-panel"
+              onClick={decrementCurrent}
+            >
+              <Prev />
+            </button>
+            <button
+              className="invisibutton next-panel"
+              onClick={incrementCurrent}
+            >
+              <Next />
+            </button>
+          </div>
+        </div>
       </div>
     </dialog>
   );

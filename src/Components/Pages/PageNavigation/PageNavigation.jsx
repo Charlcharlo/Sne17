@@ -1,11 +1,11 @@
-import { scottPilgrim } from "../../../Data/testPages";
+import { pencils } from "../../../Data/pencils";
 import { useOffset, useSetOffset } from "../../Context/OffsetContext";
 import "./PageNavigation.css";
 
 export default function PageNavigation() {
   const offset = useOffset();
   const setOffset = useSetOffset();
-  const { pages } = scottPilgrim;
+  const { pages } = pencils;
 
   function goPageOne() {
     setOffset(0);
