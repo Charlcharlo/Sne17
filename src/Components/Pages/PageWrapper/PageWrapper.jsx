@@ -12,10 +12,10 @@ export default function PageWrapper({ source, id, firstPageRef, info, index }) {
       ref={firstPageRef}
       id={id}
     >
-      {info.type === "comic" && !isIOS && (
+      {info.type === "comic" && isIOS && (
         <ComicPage source={source} info={info} index={index} />
       )}
-      {info.type === "comic" && isIOS && (
+      {info.type === "comic" && !isIOS && (
         <ComicPageSafari source={source} info={info} index={index} />
       )}
       {info.type === "splash" && (
