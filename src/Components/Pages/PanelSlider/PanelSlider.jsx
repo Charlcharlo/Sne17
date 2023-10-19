@@ -17,7 +17,7 @@ export default function PanelSlider({
 }) {
   let touchStart;
   let scrollStart;
-  const source = pagePanels[currentPanel].src;
+  const source = pagePanels[currentPanel].srcSlide;
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeydown);
