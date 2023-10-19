@@ -228,7 +228,7 @@ export const pencils = {
       ],
     },
     {
-      title: "Page 6",
+      title: "Page 5",
       type: "comic",
       panels: [
         {
@@ -281,7 +281,7 @@ export const pencils = {
       ],
     },
     {
-      title: "Page 5",
+      title: "Page 6",
       type: "comic",
       panels: [
         {
