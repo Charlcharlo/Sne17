@@ -13,6 +13,7 @@ export const pencils = {
       panels: [
         {
           src: `${window.location.origin}/Sne17/pencil-pages/page-2/panel-1.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-alt/page-2/panel-1.png`,
           style: {
             gridColumnStart: 1,
             gridColumnEnd: 13,
@@ -22,6 +23,7 @@ export const pencils = {
         },
         {
           src: `${window.location.origin}/Sne17/pencil-pages/page-2/panel-2.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-alt/page-2/panel-2.png`,
           style: {
             gridColumnStart: 1,
             gridColumnEnd: 13,
@@ -33,6 +35,7 @@ export const pencils = {
         },
         {
           src: `${window.location.origin}/Sne17/pencil-pages/page-2/panel-3.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-alt/page-2/panel-3.png`,
           style: {
             gridColumnStart: 1,
             gridColumnEnd: 13,
@@ -43,18 +46,20 @@ export const pencils = {
           },
         },
         {
-          src: `${window.location.origin}/Sne17/pencil-pages/page-2/panel-4.png`,
+          src: `${window.location.origin}/Sne17/pencil-alt/page-2/panel-4.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-alt/page-2/panel-4.png`,
           style: {
             gridColumnStart: 1,
             gridColumnEnd: 13,
-            gridRowStart: 6,
-            gridRowEnd: 10,
-            margin: "-20px -10px 0",
+            gridRowStart: 7,
+            gridRowEnd: 9,
+            margin: "-20px -10px",
             border: "none",
           },
         },
         {
           src: `${window.location.origin}/Sne17/pencil-pages/page-2/panel-5.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-alt/page-2/panel-5.png`,
           style: {
             gridColumnStart: 1,
             gridColumnEnd: 5,
@@ -65,6 +70,7 @@ export const pencils = {
         },
         {
           src: `${window.location.origin}/Sne17/pencil-pages/page-2/panel-6.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-alt/page-2/panel-6.png`,
           style: {
             gridColumnStart: 5,
             gridColumnEnd: 9,
@@ -75,6 +81,7 @@ export const pencils = {
         },
         {
           src: `${window.location.origin}/Sne17/pencil-pages/page-2/panel-7.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-alt/page-2/panel-7.png`,
           style: {
             gridColumnStart: 9,
             gridColumnEnd: 13,
@@ -91,6 +98,7 @@ export const pencils = {
       panels: [
         {
           src: `${window.location.origin}/Sne17/pencil-pages/page-3/panel-1.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-alt/page-3/panel-1.png`,
           style: {
             gridColumnStart: 1,
             gridColumnEnd: 13,
@@ -102,6 +110,7 @@ export const pencils = {
         },
         {
           src: `${window.location.origin}/Sne17/pencil-pages/page-3/panel-2.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-alt/page-3/panel-2.png`,
           style: {
             gridColumnStart: 1,
             gridColumnEnd: 13,
@@ -109,10 +118,12 @@ export const pencils = {
             gridRowEnd: 6,
             border: "none",
             marginTop: "-30px",
+            zIndex: 1,
           },
         },
         {
           src: `${window.location.origin}/Sne17/pencil-pages/page-3/panel-3.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-alt/page-3/panel-3.png`,
           style: {
             gridColumnStart: 2,
             gridColumnEnd: 12,
@@ -120,18 +131,201 @@ export const pencils = {
             gridRowEnd: 7,
             border: "none",
             margin: "10px -20px 0",
+            zIndex: 1,
           },
         },
         {
           src: `${window.location.origin}/Sne17/pencil-pages/page-3/panel-4.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-alt/page-3/panel-4.png`,
           style: {
             gridColumnStart: 1,
             gridColumnEnd: 13,
             gridRowStart: 6,
             gridRowEnd: 13,
             border: "none",
-            zIndex: "-1",
+            zIndex: 0,
             margin: "-20px -10px -10px",
+          },
+        },
+      ],
+    },
+    {
+      title: "Page 4",
+      type: "comic",
+      panels: [
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-4/panel-1.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-3/panel-1.png`,
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 5,
+            gridRowStart: 1,
+            gridRowEnd: 4,
+            zIndex: 2,
+          },
+        },
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-4/panel-2.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-4/panel-2.png`,
+          style: {
+            gridColumnStart: 5,
+            gridColumnEnd: 9,
+            gridRowStart: 1,
+            gridRowEnd: 4,
+            zIndex: 2,
+          },
+        },
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-4/panel-2.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-4/panel-2.png`,
+          style: {
+            gridColumnStart: 9,
+            gridColumnEnd: 13,
+            gridRowStart: 1,
+            gridRowEnd: 4,
+            zIndex: 2,
+          },
+        },
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-4/panel-4.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-4/panel-4.png`,
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 6,
+            gridRowStart: 4,
+            gridRowEnd: 10,
+            marginRight: "-20px",
+            zIndex: 2,
+          },
+        },
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-4/panel-5.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-4/panel-5.png`,
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 6,
+            gridRowStart: 9,
+            gridRowEnd: 13,
+            marginLeft: "10px",
+            marginTop: "10px",
+            zIndex: 2,
+          },
+        },
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-4/panel-6.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-4/panel-6.png`,
+          style: {
+            gridColumnStart: 6,
+            gridColumnEnd: 13,
+            gridRowStart: 4,
+            gridRowEnd: 13,
+            marginLeft: "-12px",
+            marginTop: "-12px",
+            marginBottom: "2px",
+            border: "none",
+          },
+        },
+      ],
+    },
+    {
+      title: "Page 6",
+      type: "comic",
+      panels: [
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-5/panel-1.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-5/panel-1.png`,
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 13,
+            gridRowStart: 1,
+            gridRowEnd: 3,
+            zIndex: "2",
+            border: "none",
+            marginBottom: "-20px",
+          },
+        },
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-5/panel-2.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-5/panel-2.png`,
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 13,
+            gridRowStart: 3,
+            gridRowEnd: 10,
+            border: "none",
+          },
+        },
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-5/panel-3.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-5/panel-3.png`,
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 5,
+            gridRowStart: 10,
+            gridRowEnd: 13,
+            border: "none",
+          },
+        },
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-5/panel-4.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-5/panel-4.png`,
+          style: {
+            gridColumnStart: 5,
+            gridColumnEnd: 13,
+            gridRowStart: 10,
+            gridRowEnd: 13,
+            border: "none",
+            marginTop: "-10px",
+          },
+        },
+      ],
+    },
+    {
+      title: "Page 5",
+      type: "comic",
+      panels: [
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-6/panel-1.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-6/panel-1.png`,
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 13,
+            gridRowStart: 1,
+            gridRowEnd: 3,
+            //   border: "none",
+          },
+        },
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-6/panel-2.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-6/panel-2.png`,
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 13,
+            gridRowStart: 3,
+            gridRowEnd: 6,
+            zIndex: "2",
+            border: "none",
+            marginTop: "-20px",
+          },
+        },
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-6/panel-3.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-6/panel-3.png`,
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 13,
+            gridRowStart: 6,
+            gridRowEnd: 8,
+          },
+        },
+        {
+          src: `${window.location.origin}/Sne17/pencil-pages/page-6/panel-4.png`,
+          srcSlide: `${window.location.origin}/Sne17/pencil-pages/page-6/panel-4.png`,
+          style: {
+            gridColumnStart: 1,
+            gridColumnEnd: 13,
+            gridRowStart: 8,
+            gridRowEnd: 13,
           },
         },
       ],
