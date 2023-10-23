@@ -22,9 +22,9 @@ export default function JumpToPage() {
 
   useEffect(() => {
     const results = [];
-    book.forEach((element) => {
+    book.forEach((element, i) => {
       if (element.title.includes(query)) {
-        results.push(element);
+        results.push({ title: element.title, index: i });
       }
       setResults(results);
     });
@@ -32,7 +32,11 @@ export default function JumpToPage() {
 
   function renderOptions(option, i) {
     return (
-      <button className="jtp-button" onClick={() => handleClick(i)} key={i}>
+      <button
+        className="jtp-button"
+        onClick={() => handleClick(option.index)}
+        key={i}
+      >
         {option.title}
       </button>
     );

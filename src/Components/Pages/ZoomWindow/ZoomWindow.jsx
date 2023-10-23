@@ -25,15 +25,16 @@ export default function ZoomWindowCopy({ source, orientation }) {
 
   function toggleZoom() {
     setZoom((prev) => {
+      if (prev) {
+        ref.current.scroll(0, 0);
+      }
       return !prev;
     });
   }
 
   const doubleTap = useDoubleTap((e) => {
     const rightHalf = e.clientX > ref.current.clientWidth / 2;
-    if (zoom) {
-      ref.current.scroll(0, 0);
-    } else if (rightHalf) {
+    if (rightHalf) {
       ref.current.scroll({
         left: backBoard.current.clientWidth,
         behavior: "smooth",
