@@ -5,17 +5,17 @@ import Prev from "../../Assets/Icons/Prev";
 
 export default function SliderContent({
   currentPanel,
-  pagePanels,
   incrementCurrent,
   decrementCurrent,
   removeAnimation,
   windowRef,
   slide,
   closeSlider,
+  page,
 }) {
   let touchStart;
   let scrollStart;
-  const source = pagePanels[currentPanel].srcSlide;
+  const source = `${page}/panel-${currentPanel + 1}.png`;
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeydown);
@@ -71,7 +71,12 @@ export default function SliderContent({
         onTouchMove={handleMove}
         onAnimationEnd={removeAnimation}
       >
-        <img data-slide={slide} className={`panel-img`} src={source} alt="" />
+        <img
+          data-slide={slide}
+          className={`panel-img`}
+          src={`${window.location.origin}/Sne17/final-pages-eng/panels/${source}`}
+          alt=""
+        />
       </div>
       <div className="row-center">
         <div className="panel-nav-buttons">

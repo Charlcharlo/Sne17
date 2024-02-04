@@ -12,7 +12,10 @@ export default function PanelSliderSafari({
   slide,
   modalIn,
   windowRef,
+  page,
 }) {
+  const source = `${page}/panel-${currentPanel + 1}.png`;
+
   function clickAway(e) {
     if (e.target === e.currentTarget) {
       closeSlider();
@@ -38,6 +41,8 @@ export default function PanelSliderSafari({
             decrementCurrent={decrementCurrent}
             removeAnimation={removeAnimation}
             windowRef={windowRef}
+            source={source}
+            page={page}
           />
         </div>
       )}

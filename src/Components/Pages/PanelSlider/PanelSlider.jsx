@@ -11,6 +11,7 @@ export default function PanelSlider({
   decrementCurrent, //v
   removeAnimation, //v
   windowRef, //v
+  page,
 }) {
   function clickAway(e) {
     if (e.target === sliderRef.current) {
@@ -30,6 +31,7 @@ export default function PanelSlider({
         decrementCurrent={decrementCurrent}
         removeAnimation={removeAnimation}
         windowRef={windowRef}
+        page={page}
       />
     </dialog>
   );

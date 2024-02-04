@@ -1,13 +1,15 @@
+import { kebabCase } from "lodash";
 import { useRef, useState } from "react";
 import PanelSlider from "../PanelSlider/PanelSlider";
 import "./ComicPage.css";
 
-export default function ComicPage({ info, index }) {
+export default function ComicPage({ info, index, src }) {
   const [currentPanel, setCurrentPanel] = useState(0);
   const [slide, setSlide] = useState("");
   const pageRef = useRef();
   const sliderRef = useRef();
   const windowRef = useRef();
+  const page = kebabCase(info.title);
 
   function showSlider(index) {
     const num = parseInt(index);
@@ -70,26 +72,23 @@ export default function ComicPage({ info, index }) {
         onClick={(e) => {
           showSlider(e.currentTarget.value);
         }}
-      >
-        <img
-          className="clickable-panel ph"
-          src={panel.src}
-          // src={`${window.location.origin}/Sne17/Images/PH-Block.png`}
-          alt={`Panel ${i}`}
-        />
-      </button>
+      ></button>
     );
   }
 
   return (
     <div>
-      <div className="panel-multi" ref={pageRef}>
-        {info.panels.map(renderPanels)}
+      <div className="full-comic-page">
+        <img src={src} className="full-comic-img" alt="" />
+        <div className="panel-multi" ref={pageRef}>
+          {info.panels.map(renderPanels)}
+        </div>
       </div>
       <PanelSlider
         currentPanel={currentPanel}
         sliderRef={sliderRef}
         pagePanels={info.panels}
+        page={page}
         incrementCurrent={incrementCurrent}
         decrementCurrent={decrementCurrent}
         closeSlider={closeSlider}

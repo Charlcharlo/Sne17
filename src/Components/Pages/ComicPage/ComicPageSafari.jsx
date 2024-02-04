@@ -1,14 +1,16 @@
+import { kebabCase } from "lodash";
 import { useRef, useState } from "react";
 import PanelSliderSafari from "../PanelSliderSafari/PanelSliderSafari";
 import "./ComicPage.css";
 
-export default function ComicPageSafari({ info, index }) {
+export default function ComicPageSafari({ info, index, src }) {
   const [currentPanel, setCurrentPanel] = useState(0);
   const [slide, setSlide] = useState("");
   const [modalIn, setModalIn] = useState(false);
   const pageRef = useRef();
   const sliderRef = useRef();
   const windowRef = useRef();
+  const page = kebabCase(info.title);
 
   function showSlider(index) {
     const num = parseInt(index);
@@ -71,20 +73,17 @@ export default function ComicPageSafari({ info, index }) {
         onClick={(e) => {
           showSlider(e.currentTarget.value);
         }}
-      >
-        <img
-          className="clickable-panel ph"
-          src={panel.src}
-          alt={`Panel ${i}`}
-        />
-      </button>
+      ></button>
     );
   }
 
   return (
     <div>
-      <div className="panel-multi" ref={pageRef}>
-        {info.panels.map(renderPanels)}
+      <div className="full-comic-page">
+        <img src={src} className="full-comic-img" alt="" />
+        <div className="panel-multi" ref={pageRef}>
+          {info.panels.map(renderPanels)}
+        </div>
       </div>
       <PanelSliderSafari
         currentPanel={currentPanel}
@@ -97,6 +96,7 @@ export default function ComicPageSafari({ info, index }) {
         slide={slide}
         modalIn={modalIn}
         windowRef={windowRef}
+        page={page}
       />
     </div>
   );

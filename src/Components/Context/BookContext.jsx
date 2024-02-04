@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useState } from "react";
-import { pencils } from "../../Data/pencils";
+import { finalEng } from "../../Data/finalEnglish";
+// import { pencils } from "../../Data/pencils";
 import { panelBookZL } from "../../Data/testPages";
 import { useLang } from "./LanguageContext";
 
@@ -11,11 +12,11 @@ export function useBook() {
 }
 
 export default function BookProvider({ children }) {
-  const [book, setBook] = useState(pencils.pages);
+  const [book, setBook] = useState(finalEng.pages);
   const language = useLang();
 
   useEffect(() => {
-    setBook(language === "en" ? pencils.pages : panelBookZL.pages);
+    setBook(language === "en" ? finalEng.pages : panelBookZL.pages);
   }, [language]);
 
   return <BookContext.Provider value={book}>{children}</BookContext.Provider>;

@@ -11,14 +11,14 @@ export default function Cover({ coverRef }) {
   return (
     <div ref={coverRef} className="cover-page col-between">
       <div className="centered-container">
-        <div className="title-wrapper">
+        {/* <div className="title-wrapper">
           <img
             className={`title-image ${langSelected && "large"}`}
             src={`${window.location.origin}/Sne17/Images/Sne-title.png`}
             alt=""
           />
-        </div>
-        {langSelected && (
+        </div> */}
+        {/* {langSelected && (
           <div className="row-between sub-header">
             <h1 className={`title-sub`}>
               {lang === "en"
@@ -29,7 +29,7 @@ export default function Cover({ coverRef }) {
             </h1>
             <PdfDownloader />
           </div>
-        )}
+        )} */}
         {!langSelected && (
           <div className="row-center lang-container">
             <LangStamp />

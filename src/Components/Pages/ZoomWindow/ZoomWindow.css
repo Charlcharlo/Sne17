@@ -1,7 +1,7 @@
 .zoom-window {
   transition: 300ms;
   width: 100vw;
-  height: calc(100vw * 1.45);
+  height: 140vw;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
   overflow-y: hidden;
   overflow-x: hidden;
@@ -46,13 +46,15 @@
 
 .zoom-toggle,
 .zoom-btn-wrapper > h2 {
-  top: 40px;
+  /* top: 40px; */
   z-index: 5;
 }
 
 .zoom-toggle > svg {
   width: 40px;
   height: 40px;
+  color: var(--white-blue);
+  filter: drop-shadow(0 0 3px var(--black-blue));
 }
 
 .zoom-hint {

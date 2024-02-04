@@ -1,26 +1,31 @@
-.panel-multi {
+.full-comic-page {
   width: 100vw;
   max-width: 1000px;
-  height: 1400px;
-  display: grid;
-  grid-template: repeat(12, 8.33fr) / repeat(12, 8.33fr);
-  gap: 10px;
-  padding: 10px;
-  border: var(--black-border);
-  box-shadow: var(--dark-shadow);
+  height: 140vw;
+  max-height: 1400px;
 }
 
-.panel-multi .invisibutton {
-  border: 2px solid var(--black-blue);
+.full-comic-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.panel-multi {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: repeat(12, 8.33fr) / repeat(12, 8.33fr);
+  padding: 10px;
+  box-shadow: var(--dark-shadow);
 }
 
 .clickable-panel {
   width: 100%;
   height: 100%;
-}
-
-@media (max-width: 1000px) {
-  .panel-multi {
-    height: 140vw;
-  }
 }

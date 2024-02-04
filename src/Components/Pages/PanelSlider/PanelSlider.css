@@ -30,11 +30,6 @@
   border-radius: 20px;
 }
 
-/* .cancel-button > svg {
-  height: 40px;
-  width: 40px;
-} */
-
 .panel-modal .invisibutton:hover {
   background-color: var(--med-blue);
 }
@@ -54,7 +49,6 @@
   overflow-y: hidden;
   margin: 10px 0;
   width: 100%;
-  /* max-width: calc(100vw - 80px); */
   overflow-x: hidden;
   background-color: var(--white-blue);
 }
@@ -62,8 +56,6 @@
 .panel-img {
   width: 100%;
   height: 100%;
-  /* height: calc(100vh - 80px); */
-  /* max-height: calc(100vh - 20px); */
   box-sizing: border-box;
   object-fit: contain;
 }
@@ -96,6 +88,7 @@
 }
 
 .panel-modal > .col-between {
+  width: 100%;
   height: 100%;
 }
 
@@ -104,27 +97,24 @@
 }
 
 @media (max-width: 800px) {
-  /* .panel-window {
-    position: absolute;
-  } */
-
   .panel-modal {
     width: 100vw;
     max-width: unset;
     margin: auto 0;
     height: 600px;
-    padding: 20px 10px;
+    padding: 20px 0;
   }
 
   .panel-modal > .col-between {
     gap: 0;
-    width: calc(100vw - 20px);
+    /* width: calc(100vw - 20px); */
     height: 100%;
   }
 
   .panel-window {
     overflow-x: scroll;
     text-align: center;
+    width: 100%;
   }
 
   .panel-img {

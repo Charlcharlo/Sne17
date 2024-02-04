@@ -1,9 +1,9 @@
 .cover-page {
   height: 100vh;
-  background-image: url(/public/Images/Sne-cover.jpg);
+  background-image: url(/public/Images/Sne17_Cover_final_draft.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   gap: 20px;
   padding: 20px;
   padding-top: 80px;
@@ -64,7 +64,8 @@
 
 @media (max-width: 800px) {
   .cover-page {
-    background-image: url(/public/Images/Sne-cover-mobi.jpg);
+    /* background-image: url(/public/Images/Sne-cover-mobi.jpg); */
+    background-size: cover;
   }
 
   .title-sub {
