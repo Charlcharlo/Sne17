@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Cancel from "../../Assets/Icons/Cancel";
 import Next from "../../Assets/Icons/Next";
 import Prev from "../../Assets/Icons/Prev";
+import SdgWheel from "../../Assets/Icons/SdgWheel";
+import { isMobile } from "react-device-detect";
 
 export default function SliderContent({
   currentPanel,
@@ -16,6 +18,14 @@ export default function SliderContent({
   let touchStart;
   let scrollStart;
   const source = `${page}/panel-${currentPanel + 1}.png`;
+  const [loading, setLoading] = useState(true);
+  const [showButtons, setShowButtons] = useState(false);
+  const buttonVis = showButtons ? "visible" : "hidden";
+
+  useEffect(() => {
+    setLoading(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPanel]);
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeydown);
@@ -35,9 +45,23 @@ export default function SliderContent({
     }
   }
 
+  function handleClick() {
+    revealButtons();
+  }
+
+  function revealButtons() {
+    setShowButtons(true);
+    setTimeout(hideButtons, "3000");
+  }
+
+  function hideButtons() {
+    setShowButtons(false);
+  }
+
   function handleTouchStart(e) {
     touchStart = e.touches[0].clientX;
     scrollStart = windowRef.current.scrollLeft;
+    revealButtons();
   }
 
   function handleMove(e) {
@@ -55,45 +79,73 @@ export default function SliderContent({
   }
 
   return (
-    <div className="col-between">
-      <div className="row-end">
-        <button
-          className="invisibutton cancel-button centered-container"
-          onClick={closeSlider}
+    <div className="fit-height">
+      <div className="col-between fit-height">
+        <div
+          className="panel-window"
+          ref={windowRef}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleMove}
+          onAnimationEnd={removeAnimation}
+          onClick={handleClick}
         >
-          <Cancel />
-        </button>
-      </div>
-      <div
-        className="panel-window"
-        ref={windowRef}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleMove}
-        onAnimationEnd={removeAnimation}
-      >
-        <img
-          data-slide={slide}
-          className={`panel-img`}
-          src={`${window.location.origin}/Sne17/final-pages-eng/panels/${source}`}
-          alt=""
-        />
-      </div>
-      <div className="row-center">
-        <div className="panel-nav-buttons">
-          <button
-            className="invisibutton prev-panel"
-            onClick={decrementCurrent}
+          <img
+            data-slide={slide}
+            className={`panel-img`}
+            style={{ display: loading ? "none" : "block" }}
+            onLoad={() => setLoading(false)}
+            src={`${window.location.origin}/Sne17/final-pages-eng/panels/${source}`}
+            alt=""
+          />
+          {loading && (
+            <div className="centered-container">
+              <div className="loader-wrapper">
+                <SdgWheel />
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="row-center">
+          <div
+            className={`panel-nav-buttons ${isMobile && buttonVis + " mobile"}`}
           >
-            <Prev />
-          </button>
-          <button
-            className="invisibutton next-panel"
-            onClick={incrementCurrent}
-          >
-            <Next />
-          </button>
+            <button
+              className="invisibutton prev-panel"
+              onClick={
+                isMobile
+                  ? showButtons
+                    ? decrementCurrent
+                    : revealButtons
+                  : decrementCurrent
+              }
+            >
+              <Prev />
+            </button>
+            <button
+              className="invisibutton next-panel"
+              onClick={
+                isMobile
+                  ? showButtons
+                    ? incrementCurrent
+                    : revealButtons
+                  : incrementCurrent
+              }
+            >
+              <Next />
+            </button>
+          </div>
         </div>
       </div>
+      <button
+        className={`invisibutton cancel-button centered-container ${
+          isMobile && buttonVis
+        }`}
+        onClick={
+          isMobile ? (showButtons ? closeSlider : revealButtons) : closeSlider
+        }
+      >
+        <Cancel />
+      </button>
     </div>
   );
 }

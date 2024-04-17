@@ -22,7 +22,7 @@ export default function SideBar({ hidden, hidePanel }) {
             className="panel-link"
             href="https://www.durban.gov.za/"
           >
-            Ethekweni Strathub
+            Ethekweni Municipality
           </a>
           <a
             target="_blank"
@@ -30,7 +30,7 @@ export default function SideBar({ hidden, hidePanel }) {
             className="panel-link"
             href="https://strathub.durban.gov.za/"
           >
-            Ethekweni Municipality
+            Ethekweni StratHub
           </a>
         </div>
         <div className="panel-section">

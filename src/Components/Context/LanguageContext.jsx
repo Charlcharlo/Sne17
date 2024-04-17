@@ -18,7 +18,7 @@ export function useLangSelected() {
 }
 
 export default function LangProvider({ children }) {
-  const [lang, setLang] = useState("");
+  const [lang, setLang] = useState("eng");
   const [langSelected, setLangSeleced] = useState(false);
 
   function chooseLanguage(newLang) {

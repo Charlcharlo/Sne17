@@ -4,22 +4,15 @@
 }
 
 .stamp-button {
-  width: 150px;
-  height: 50px;
+  width: 220px;
+  height: 70px;
   background-color: var(--black-blue);
   color: var(--white-blue);
   font-family: var(--title-font);
   border: var(--white-border);
-  font-size: 25px;
+  font-size: 30px;
   padding: 0 10px;
-}
-
-.stamp-button:first-of-type {
-  text-align: left;
-}
-
-.stamp-button:last-of-type {
-  text-align: right;
+  text-align: center;
 }
 
 .stamp-button:hover {
@@ -28,9 +21,9 @@
 
 .stamp-icon-outline {
   background-color: var(--white-blue);
-  border-radius: 25px;
-  width: 50px;
-  height: 50px;
+  border-radius: 35px;
+  width: 70px;
+  height: 70px;
   position: absolute;
   left: 0;
   right: 0;
@@ -43,13 +36,37 @@
   background-color: var(--black-blue);
   color: var(--white-blue);
   text-align: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 22px;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
 }
 
 .stamp-icon svg {
   margin-top: 2px;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
+}
+@media (max-width: 500px) {
+  .stamp-button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .stamp-icon-outline {
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .stamp-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+  }
+
+  .stamp-icon svg {
+    width: 40px;
+    height: 40px;
+  }
 }

@@ -18,7 +18,7 @@ export default function PdfDownloader() {
   };
   return (
     <button className="pdf-button row-center" onClick={onButtonClick}>
-      <p>PDF</p>
+      <p>DOWNLOAD PDF</p>
       <DownloadH />
     </button>
   );

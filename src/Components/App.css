@@ -59,6 +59,12 @@ a {
   justify-content: space-between;
 }
 
+.col-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
 .centered-container {
   display: flex;
   flex-direction: column;
@@ -74,6 +80,11 @@ a {
 .invisibutton > svg {
   height: 30px;
   width: 30px;
+}
+
+.fit-height {
+  height: 100%;
+  width: 100%;
 }
 
 @media (max-width: 800px) {

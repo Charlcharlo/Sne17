@@ -13,10 +13,18 @@ export default function LangStamp() {
   }
   return (
     <div className="lang-stamp row-between">
-      <button className="stamp-button" onClick={setLang} value="en">
+      <button
+        className="stamp-button centered-container"
+        onClick={setLang}
+        value="eng"
+      >
         English
       </button>
-      <button className="stamp-button" onClick={setLang} value="zl">
+      <button
+        className="stamp-button centered-container"
+        onClick={setLang}
+        value="zl"
+      >
         isiZulu
       </button>
       <div className="stamp-icon-outline centered-container">

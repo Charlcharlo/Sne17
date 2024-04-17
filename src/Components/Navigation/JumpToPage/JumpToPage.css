@@ -4,7 +4,7 @@
 }
 
 .jtp-input {
-  font-family: var(--body-font);
+  font-family: var(--title-font);
   color: #aec6ce;
   text-align: center;
   width: 100%;
@@ -18,10 +18,6 @@
 .jtp-input::placeholder {
   color: #aec6ce;
   transition: 300ms ease-in;
-}
-
-.jtp-input:focus::placeholder {
-  color: var(--med-blue);
 }
 
 .jtp-input:focus {
@@ -67,15 +63,41 @@
   display: block;
   background-color: var(--med-blue);
   border: 1px solid var(--darker-blue);
-  padding: 10px;
+  padding: 5px 10px;
   font-family: var(--body-font);
   color: var(--white-blue);
-  transition: 200ms;
+  transition: padding 300ms;
+}
+
+.jtp-name {
+  font-family: var(--title-font);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white-blue);
+  text-shadow: 1px 1px 1px var(--black-blue);
+}
+
+.jtp-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: opacity(0);
+  transition: filter 300ms;
 }
 
 .jtp-button:hover {
-  /* background-color: var(--darker-green); */
-  background: var(--hl-green);
-
+  padding: 10px;
   color: var(--black-blue);
+}
+
+.jtp-button:hover .jtp-img {
+  filter: opacity(100);
+}
+
+.jtp-button:hover .jtp-name {
+  font-size: 20px;
+  transition: 300ms;
 }

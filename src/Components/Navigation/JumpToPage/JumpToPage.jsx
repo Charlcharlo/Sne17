@@ -1,3 +1,4 @@
+import { kebabCase } from "lodash";
 import { useEffect, useState } from "react";
 import { useBook } from "../../Context/BookContext";
 import { useSetInitial } from "../../Context/InitialContext";
@@ -37,7 +38,14 @@ export default function JumpToPage() {
         onClick={() => handleClick(option.index)}
         key={i}
       >
-        {option.title}
+        <img
+          className="jtp-img"
+          src={`${
+            window.location.origin
+          }/Sne17/final-pages-eng/preview/${kebabCase(option.title)}.jpg`}
+          alt=""
+        />
+        <h2 className="jtp-name">{option.title}</h2>
       </button>
     );
   }

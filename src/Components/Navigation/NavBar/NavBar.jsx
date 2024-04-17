@@ -54,18 +54,17 @@ export default function NavBar() {
   return (
     <>
       <nav className={`row-between nav-bar ${hidden ? "hidden" : "shown"}`}>
-        <button className="invisibutton" onClick={scrollTop}>
-          <Symbol17 />
-          {!flex && (
-            <img
-              className="nav-title-img"
-              src={`${window.location.origin}/Sne17/Images/Sne-title.png`}
-              alt=""
-            />
-          )}
+        <button className="invisibutton nav-bar-btn" onClick={scrollTop}>
+          <img
+            className="nav-title-img"
+            src={`${window.location.origin}/Sne17/Images/${
+              flex ? "nav-title-mobi" : "nav-title"
+            }.png`}
+            alt=""
+          />
         </button>
         {langSelected && <JumpToPage />}
-        <div className="row-end">
+        <div className="row-end menu-wrapper">
           {langSelected && (
             <Invisibutton
               className="invisibutton"

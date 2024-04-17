@@ -6,8 +6,6 @@
 
 .down-arrow {
   color: #e78c06;
-  /* height: 50px; */
-  /* filter: drop-shadow(var(--dark-shadow)); */
 }
 
 .down-arrow > svg {

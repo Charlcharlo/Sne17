@@ -1,42 +1,42 @@
 import PdfDownloader from "../../Assets/PdfDownloader/PdfDownloader";
-import { useLang, useLangSelected } from "../../Context/LanguageContext";
+import { useFlex } from "../../Context/FlexContext";
+import { useLangSelected } from "../../Context/LanguageContext";
 import LangStamp from "../LangStamp/LangStamp";
 import ReadingOptions from "../ReadingOptions/ReadingOptions";
 import "./Cover.css";
 
 export default function Cover({ coverRef }) {
-  const lang = useLang();
+  // const lang = useLang();
   const langSelected = useLangSelected();
+  const flex = useFlex();
 
   return (
-    <div ref={coverRef} className="cover-page col-between">
-      <div className="centered-container">
-        {/* <div className="title-wrapper">
-          <img
-            className={`title-image ${langSelected && "large"}`}
-            src={`${window.location.origin}/Sne17/Images/Sne-title.png`}
-            alt=""
-          />
-        </div> */}
-        {/* {langSelected && (
-          <div className="row-between sub-header">
-            <h1 className={`title-sub`}>
-              {lang === "en"
-                ? "And the 17 Symbols"
-                : lang === "zl"
-                ? "Kanye nophawu lwe-17"
-                : ""}
-            </h1>
-            <PdfDownloader />
-          </div>
-        )} */}
-        {!langSelected && (
-          <div className="row-center lang-container">
-            <LangStamp />
-          </div>
-        )}
+    <div
+      ref={coverRef}
+      className={`cover-page col-end ${!langSelected && "scroll-locked"}`}
+    >
+      <div className="title-wrapper">
+        <img
+          className={`title-image ${langSelected && "large"}`}
+          src={`${window.location.origin}${
+            flex
+              ? "/Sne17/Images/Sne-title-mobi.png"
+              : "/Sne17/Images/Sne-title.png"
+          }`}
+          alt=""
+        />
       </div>
-      {langSelected && <ReadingOptions />}
+      {!langSelected && (
+        <div className="row-center lang-container">
+          <LangStamp />
+        </div>
+      )}
+      {langSelected && (
+        <div className="centered-container">
+          <PdfDownloader />
+          <ReadingOptions />
+        </div>
+      )}
     </div>
   );
 }

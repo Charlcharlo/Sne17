@@ -9,9 +9,6 @@ export default function ReadingOptions() {
       <div className="down-arrow">
         <DownArrow />
       </div>
-      {/* <div className="down-arrow-border">
-        <div className="down-arrow" />
-      </div> */}
     </div>
   );
 }
