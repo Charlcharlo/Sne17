@@ -5,6 +5,7 @@ export const finalEng = {
       title: "Editor's Note",
       page: "editor",
       type: "html",
+      src: "editors-note.jpg",
     },
     {
       title: "Preface",
@@ -653,11 +654,13 @@ export const finalEng = {
       title: "About the Characters",
       page: "characters",
       type: "html",
+      src: "about-the-characters.jpg",
     },
     {
       title: "About SDGs",
       page: "sdg",
       type: "html",
+      src: "about-sd-gs.jpg",
     },
   ],
 };
