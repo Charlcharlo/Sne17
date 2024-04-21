@@ -23,9 +23,14 @@
   --white-border: 2px solid var(--white-blue);
   --black-border: 2px solid var(--black-blue);
 
-  --title-font: komika-title;
+  --title-font: komika-hand;
   --body-font: komika-text;
   --cover-font: the-bold-font;
+}
+
+@font-face {
+  font-family: "komika-hand";
+  src: url("../fonts/komika_hands/KOMIKAH_.ttf");
 }
 
 @font-face {

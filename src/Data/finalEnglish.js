@@ -2,6 +2,11 @@ export const finalEng = {
   directory: "final-pages-eng",
   pages: [
     {
+      title: "Editor's Note",
+      page: "editor",
+      type: "html",
+    },
+    {
       title: "Preface",
       type: "splash",
       orientation: "portrait",
@@ -643,6 +648,16 @@ export const finalEng = {
       type: "splash",
       orientation: "portrait",
       src: `page-24.jpg`,
+    },
+    {
+      title: "About the Characters",
+      page: "characters",
+      type: "html",
+    },
+    {
+      title: "About SDGs",
+      page: "sdg",
+      type: "html",
     },
   ],
 };

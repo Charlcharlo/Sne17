@@ -1,0 +1,114 @@
+.splash-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.splash-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.full-page.char {
+  padding: 20px 0;
+  width: 100vw;
+  background-color: #201646;
+}
+
+.char .title-smaller,
+.char .body-text {
+  color: var(--white-blue);
+}
+
+.sne {
+  background-color: #1a3668;
+  margin: 20px 0;
+}
+
+.om {
+  background-color: #5fba46;
+}
+
+.glow {
+  background-color: #fdb714;
+}
+
+.sprite {
+  background-color: #23a9d2;
+}
+
+.lit {
+  background-color: #b13239;
+}
+
+.terra {
+  background-color: #48773c;
+}
+
+.char-strip {
+  margin: 30px 0;
+}
+
+.char-card {
+  max-width: 1200px;
+  padding: 10px 20px;
+  /* display: flex;
+  align-items: flex-start; */
+  gap: 10px;
+}
+
+.char-name {
+  font-size: 1.5rem;
+}
+
+.char-card .body-text {
+  text-align: left;
+}
+
+.char-img {
+  margin: -20px 0;
+  object-fit: contain;
+  max-width: 100vw;
+  float: left;
+}
+
+.reverse {
+  /* flex-direction: row-reverse; */
+  float: right;
+}
+
+.keepers {
+  gap: 0;
+}
+
+@media (max-width: 900px) {
+  .char-img {
+    width: 300px;
+    margin-right: 10px;
+  }
+
+  .reverse {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .char {
+    margin-top: 20px;
+  }
+
+  .char-card {
+    display: block;
+    padding: 0;
+  }
+
+  .char-card .body-text {
+    margin: 0 10px 10px;
+  }
+
+  .char-img {
+    margin: 0;
+  }
+}

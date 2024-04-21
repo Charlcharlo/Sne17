@@ -1,0 +1,19 @@
+.full-page.editor {
+  width: 100vw;
+  background-color: #201646;
+}
+
+.editor .title-smaller,
+.editor .body-text {
+  color: var(--white-blue);
+}
+
+.editor .body-text {
+  text-align: justify;
+}
+
+.sig-container {
+  width: 100%;
+  text-align: left;
+  margin: 10px 0;
+}

@@ -6,7 +6,6 @@ import { useOffset } from "../../Context/OffsetContext";
 import { useInitial } from "../../Context/InitialContext";
 import PageNavigation from "../PageNavigation/PageNavigation";
 import { useBook } from "../../Context/BookContext";
-import ShareButtons from "../Html/ShareButtons/ShareButtons";
 
 export default function InfiniteScroll({ coverRef }) {
   const [current, setCurrent] = useState(1);
@@ -58,7 +57,6 @@ export default function InfiniteScroll({ coverRef }) {
     <>
       {offset > 0 && <PageNavigation />}
       <BookViewer pages={pages} />
-      <ShareButtons />
     </>
   );
 }

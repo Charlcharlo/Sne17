@@ -16,7 +16,8 @@ export default function ShareButtons() {
   const MAIN_URL = "Sne17.com";
   return (
     <section className="centered-container">
-      <div className="row-center">
+      <h1 className="title-smaller">Spread the message</h1>
+      <div className="row-center share-buttons">
         <FacebookShareButton url={MAIN_URL}>
           <FacebookIcon />
         </FacebookShareButton>

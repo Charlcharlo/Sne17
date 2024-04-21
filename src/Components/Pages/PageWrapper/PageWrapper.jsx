@@ -1,4 +1,3 @@
-import { kebabCase } from "lodash";
 import { isIOS } from "react-device-detect";
 import { useFlex } from "../../Context/FlexContext";
 import { useLang } from "../../Context/LanguageContext";
@@ -31,7 +30,7 @@ export default function PageWrapper({ id, firstPageRef, info, index }) {
       {info.type === "splash" && (
         <SplashPage src={srcFixed} orientation={info.orientation} />
       )}
-      {info.type === "html" && <HtmlContainer name={kebabCase(info.title)} />}
+      {info.type === "html" && <HtmlContainer name={info.page} />}
     </section>
   );
 }
