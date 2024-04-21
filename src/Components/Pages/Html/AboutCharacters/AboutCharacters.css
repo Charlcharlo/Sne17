@@ -21,6 +21,14 @@
   color: var(--white-blue);
 }
 
+.sne .char-img,
+.glow .char-img,
+.lit .char-img,
+.om .char-img,
+.sprite .char-img {
+  max-width: 300px;
+}
+
 .sne {
   background-color: #1a3668;
   margin: 20px 0;
@@ -53,8 +61,6 @@
 .char-card {
   max-width: 1200px;
   padding: 10px 20px;
-  /* display: flex;
-  align-items: flex-start; */
   gap: 10px;
 }
 
@@ -71,11 +77,14 @@
   object-fit: contain;
   max-width: 100vw;
   float: left;
+  margin-right: 10px;
 }
 
 .reverse {
   /* flex-direction: row-reverse; */
   float: right;
+  margin-left: 10px;
+  margin-right: 0;
 }
 
 .keepers {
@@ -83,14 +92,8 @@
 }
 
 @media (max-width: 900px) {
-  .char-img {
-    width: 300px;
-    margin-right: 10px;
-  }
-
-  .reverse {
-    margin-left: 10px;
-    margin-right: 0;
+  .terra-wrapper .char-img {
+    margin-bottom: 10px;
   }
 }
 
@@ -110,5 +113,6 @@
 
   .char-img {
     margin: 0;
+    max-width: 100vw !important;
   }
 }

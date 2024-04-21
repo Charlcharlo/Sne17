@@ -31,7 +31,9 @@ export default function AboutCharacters() {
         <h2 className="title-smaller">{whoKeeper.title}</h2>
         <div className="keepers">{whoKeeper.keepers.map(mapKeepers)}</div>
         <h2 className="title-smaller">{whatTerra.title}</h2>
-        <div className="keepers">{whatTerra.cards.map(mapKeepers)}</div>
+        <div className="keepers terra-wrapper">
+          {whatTerra.cards.map(mapKeepers)}
+        </div>
       </div>
     </div>
   );
