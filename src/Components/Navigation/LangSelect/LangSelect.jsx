@@ -20,8 +20,8 @@ export default function LangSelect() {
           type="radio"
           onChange={handleChange}
           name="lang"
-          value="en"
-          checked={lang === "en"}
+          value="eng"
+          checked={lang === "eng"}
         />
         <div className="row-start">
           <Check />

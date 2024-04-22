@@ -41,7 +41,7 @@ export const eng = {
     cards: [
       {
         name: "The terrarium",
-        text: "is the underground chamber where the keepers live.\n\nA terrarium is  a self-sustaining ecosystem.\n\nIt is a sealed environment where plants grow by recycling the water that they produce through a process called “transpiration”.\n\nInstead of “evaporation” the water that the plants produce is saved by “condensation”. This means that instead of becoming gas, it remains liquid, and can be recycled back into the root system of the plants and the soil.",
+        text: " is the underground chamber where the keepers live.\n\nA terrarium is  a self-sustaining ecosystem.\n\nIt is a sealed environment where plants grow by recycling the water that they produce through a process called “transpiration”.\n\nInstead of “evaporation” the water that the plants produce is saved by “condensation”. This means that instead of becoming gas, it remains liquid, and can be recycled back into the root system of the plants and the soil.",
         class: "terra",
         image: "terra-one.jpg",
         rev: true,

@@ -7,7 +7,6 @@
   gap: 20px;
   padding: 0;
   padding-top: 80px;
-  /* align-items: center; */
 }
 
 .cover-page.scroll-locked {
@@ -83,6 +82,9 @@
 
   .title-image {
     object-fit: contain;
+    object-position: top;
+    width: 100%;
+    margin-top: 70px;
   }
 
   .sub-header {
@@ -100,10 +102,5 @@
   .cover-page .pdf-button svg {
     height: 30px;
     width: 30px;
-  }
-
-  .title-image {
-    width: 100%;
-    margin-top: 70px;
   }
 }

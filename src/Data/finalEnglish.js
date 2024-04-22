@@ -2,6 +2,12 @@ export const finalEng = {
   directory: "final-pages-eng",
   pages: [
     {
+      title: "Credits",
+      type: "splash",
+      src: "credits.jpg",
+      orientation: "portrait",
+    },
+    {
       title: "Editor's Note",
       page: "editor",
       type: "html",
@@ -651,16 +657,22 @@ export const finalEng = {
       src: `page-24.jpg`,
     },
     {
+      title: "About SDGs",
+      page: "sdg",
+      type: "html",
+      src: "about-sd-gs.jpg",
+    },
+    {
       title: "About the Characters",
       page: "characters",
       type: "html",
       src: "about-the-characters.jpg",
     },
     {
-      title: "About SDGs",
-      page: "sdg",
-      type: "html",
-      src: "about-sd-gs.jpg",
+      title: "Back Cover",
+      type: "splash",
+      orientation: "portrait",
+      src: `back-cover.jpg`,
     },
   ],
 };

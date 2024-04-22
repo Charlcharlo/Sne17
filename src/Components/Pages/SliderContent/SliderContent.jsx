@@ -4,6 +4,8 @@ import Next from "../../Assets/Icons/Next";
 import Prev from "../../Assets/Icons/Prev";
 import SdgWheel from "../../Assets/Icons/SdgWheel";
 import { isMobile } from "react-device-detect";
+import { useLang } from "../../Context/LanguageContext";
+import { useFlex } from "../../Context/FlexContext";
 
 export default function SliderContent({
   currentPanel,
@@ -17,7 +19,12 @@ export default function SliderContent({
 }) {
   let touchStart;
   let scrollStart;
+  const flex = useFlex();
+  const lang = useLang();
   const source = `${page}/panel-${currentPanel + 1}.png`;
+  const pageSource = `${window.location.origin}/Sne17/final-pages-${lang}/${
+    flex ? "panels-mobi" : "panels"
+  }/${source}`;
   const [loading, setLoading] = useState(true);
   const [showButtons, setShowButtons] = useState(false);
   const buttonVis = showButtons ? "visible" : "hidden";
@@ -94,7 +101,7 @@ export default function SliderContent({
             className={`panel-img`}
             style={{ display: loading ? "none" : "block" }}
             onLoad={() => setLoading(false)}
-            src={`${window.location.origin}/Sne17/final-pages-eng/panels/${source}`}
+            src={pageSource}
             alt=""
           />
           {loading && (
