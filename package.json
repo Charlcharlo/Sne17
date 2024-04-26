@@ -18,6 +18,8 @@
     "react-click-away-listener": "^2.2.3",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
+    "react-router": "^6.23.0",
+    "react-router-dom": "^6.23.0",
     "react-share": "^5.1.0",
     "use-double-tap": "^1.3.5"
   },

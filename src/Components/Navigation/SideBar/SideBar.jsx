@@ -13,9 +13,9 @@ export default function SideBar({ hidden, hidePanel }) {
         </div>
         <div className="panel-section">
           <h2 className="panel-section-header">Learn More</h2>
-          <a className="panel-link" href="">
+          {/* <a className="panel-link" href="">
             About the author
-          </a>
+          </a> */}
           <a
             target="_blank"
             rel="noreferrer"

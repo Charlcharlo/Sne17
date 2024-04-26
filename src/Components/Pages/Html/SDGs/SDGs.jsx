@@ -2,9 +2,12 @@ import "./SDGs.css";
 import { eng } from "./text";
 import ShareButtons from "../ShareButtons/ShareButtons";
 import BackToTop from "../BackToTop/BackToTop";
+import { useLang } from "../../../Context/LanguageContext";
+import { zl } from "../SDGs/text";
 
 export default function SDGs() {
-  const { goals, title, subTitle, body } = eng;
+  const lang = useLang();
+  const { goals, title, subTitle, body } = lang === "eng" ? eng : zl;
   function mapIcons(goal, i) {
     const num = i + 1;
     return (

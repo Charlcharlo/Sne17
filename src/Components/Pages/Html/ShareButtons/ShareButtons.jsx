@@ -15,7 +15,7 @@ import {
 export default function ShareButtons() {
   const MAIN_URL = "Sne17.com";
   return (
-    <section className="centered-container">
+    <section className="centered-container share">
       <h1 className="title-smaller">Share the 17 Symbols</h1>
       <div className="row-center-flex share-buttons">
         <FacebookShareButton url={MAIN_URL}>

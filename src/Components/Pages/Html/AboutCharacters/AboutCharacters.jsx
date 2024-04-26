@@ -1,10 +1,12 @@
+import { useLang } from "../../../Context/LanguageContext";
 import Splashes from "../Splashes/Splashes";
 import "./AboutCharacters.css";
 import CharCard from "./CharCard";
-import { eng } from "./text";
+import { eng, zl } from "./text";
 
 export default function AboutCharacters() {
-  const { whoSne, whoKeeper, whatTerra } = eng;
+  const lang = useLang();
+  const { whoSne, whoKeeper, whatTerra } = lang === "eng" ? eng : zl;
 
   function mapKeepers(keeper) {
     return (
@@ -23,7 +25,7 @@ export default function AboutCharacters() {
       <div className="col-center">
         <h2 className="title-smaller">{whoSne.title}</h2>
         <CharCard
-          name="Sinethemba"
+          name={whoSne.name}
           className="sne"
           text={whoSne.text}
           img="sne.jpg"

@@ -22,3 +22,28 @@ export const eng = {
   subTitle: "Introducing the Sustainable Development Goals",
   body: "IN THE YEAR 2015, LEADERS FROM 193 COUNTRIES OF THE WORLD CAME TOGETHER TO FACE THE FUTURE.\n\nAnd what they saw was daunting. Famines. Drought. Wars. Plagues. Poverty. Not just in some faraway place, but in their own cities and towns and villages. They knew things didn’t have to be this way. They knew we had enough food to feed the world, but that it wasn’t getting shared. They knew there were medicines for HIV and other diseases, but they cost a lot. They knew that earthquakes and floods were inevitable, but that the high death tolls were not.\n\nThey also knew that billions of people worldwide shared their hope for a better future.\n\nSo leaders from these countries created a plan called the Sustainable Development Goals (SDGs). This set of 17 goals imagines a future just 15 years off that would be rid of poverty and hunger, and safe from the worst effects of climate change. It’s an ambitious plan. But there’s ample evidence that we can succeed. In the past 15 years, the international community cut extreme poverty in half.\n\nNow we can finish the job.\n\nThe United Nations Development Programme (UNDP) is one of the leading organizations working to fulfill the SDGs by the year 2030. Present in nearly 170 countries and territories, we help nations make the Goals a reality. We also champion the Goals so that people everywhere know how to do their part.\n\nUNDP is proud to continue as a leader in this global movement.\n\nLearn about the Sustainable Development Goals. What’s your Goal?\n\n",
 };
+
+export const zl = {
+  goals: [
+    "No poverty (SDG 1)",
+    "Zero hunger (SDG 2)",
+    "Good health and well-being (SDG 3)",
+    "Quality education (SDG 4)",
+    "Gender equality (SDG 5)",
+    "Clean water and sanitation (SDG 6)",
+    "Affordable and clean energy (SDG 7)",
+    "Decent work and economic growth (SDG 8)",
+    "Industry, innovation and infrastructure (SDG 9)",
+    "Reduced inequalities (SDG 10)",
+    "Sustainable cities and communities (SDG 11)",
+    "Responsible consumption and production (SDG 12)",
+    "Climate action (SDG 13)",
+    "Life below water (SDG 14)",
+    "Life on land (SDG 15)",
+    "Peace, justice, and strong institutions (SDG 16)",
+    "Partnerships for the goals (SDG 17)",
+  ],
+  title: "Ziyini izmpawu eziwu-17?",
+  subTitle: "Sibika i-Sustainable Development Goals",
+  body: "NGONYAKA KA2015, ABAHOLI ABAVELA EMAZWENI ANGU-193 EMHLABENI BAHLANGANA UKUZE BAQONDE NOMA BABHEKE IKUSASA NDAWONYE.\n\nInto abayibona iyethusa. Indlala. Isomiso. Izimpi. Izifo. Inhlupheko. Hhayi kude le, emadolobheni, emalokishini nasemaphandleni abo. Bebazi ukuthi akufanele izinto zibenjalo. Bebazi ukuthi sinokudla okwanele ukondla umhlaba wonke, kodwa  akwabelwana ngalokhu kudla. Bebazi ukuthi kunamakhambi e-HIV nezinye izifo kodwa kubiza kakhulu. Bebazi ukuthi ukuzamazama komhlaba nezikhukhula ayikho into abangayenza ukukuvimba, kodwa ukufa kwabantu angeke kube sezingeni eliphezulu.\n\nBebazi ukuthi izinkulungwane zabantu emhlabeni wonke zabelana ngethemba nangekusasa,elingcono.\n\nNgakho abaholi bakulamazwe baqale uhlelo olubizwa ngokuthi i-Sustainable Development Goals (SDGs). Loluhlelo lunemigomo ewu-17 yokuthi eminyakeni ewu-15 kungaphela ukuhlupheka, nendlala, nokuphepha ezingozini ezinzulu ze-climate change. Uhlelo olunomfutho kakhulu. Futhi kunobufakazi obuqavile obukhomba ukuthi singaphumelela. Eminyakeni ewu-15 edlule umphakathi womhlaba wonke wehlise ukulamba ngokweqile kwaba uhhafu.\n\nManje singawuqedela lo msebenzi.\n\ni-United Nations Development Programme (UNDP) elinye lamaqembu ahamba phambili kuzo zonke izinhlangano emhlabeni, lifuna ukuphumelelisa i-SDGs ngesikhathi sokufika konyaka u-2030. Njengamanje emazweni cishe angu170 nasezindaweni zawo, sisiza izizwe ukuthi zenze izinhloso zazo ziphumelele. Futhi siseka izinhloso, khona abantu yonke indawo bezokwazi ukuthi bayidlala kanjani indima yabo.\n\nUNDP iyaziqhenya ukuqhubeka njengomholi kunhlangano yomhlaba wonke.\n\nFunda ngeSDG. Yini inhloso yakho?\n\n",
+};

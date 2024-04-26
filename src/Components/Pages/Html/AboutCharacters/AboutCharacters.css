@@ -80,6 +80,10 @@
   margin-right: 10px;
 }
 
+.terra-wrapper .char-img {
+  height: 100%;
+}
+
 .reverse {
   /* flex-direction: row-reverse; */
   float: right;

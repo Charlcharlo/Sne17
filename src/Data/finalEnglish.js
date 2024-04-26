@@ -669,6 +669,12 @@ export const finalEng = {
       src: "about-the-characters.jpg",
     },
     {
+      title: "About the Team",
+      type: "splash",
+      orientation: "portrait",
+      src: `about-team.jpg`,
+    },
+    {
       title: "Back Cover",
       type: "splash",
       orientation: "portrait",

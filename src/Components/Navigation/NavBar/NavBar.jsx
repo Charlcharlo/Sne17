@@ -6,7 +6,6 @@ import JumpToPage from "../JumpToPage/JumpToPage";
 import SideBar from "../SideBar/SideBar";
 import "./NavBar.css";
 import HamburgerH from "../../Assets/Icons/HamburgerH";
-import Symbol17 from "../../Assets/Icons/Symbol17";
 import { useFlex } from "../../Context/FlexContext";
 
 export default function NavBar() {
