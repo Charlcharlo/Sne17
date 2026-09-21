@@ -40,9 +40,9 @@ export default function JumpToPage() {
       >
         <img
           className="jtp-img"
-          src={`${
-            window.location.origin
-          }/Sne17/final-pages-eng/preview/${kebabCase(option.title)}.jpg`}
+          src={`${window.location.origin}/final-pages-eng/preview/${kebabCase(
+            option.title,
+          )}.jpg`}
           alt=""
         />
         <h2 className="jtp-name">{option.title}</h2>

@@ -4,7 +4,7 @@ export default function CharCard({ img, text, name, className, rev }) {
       <div className={`char-card`}>
         <img
           className={`char-img ${rev && "reverse"}`}
-          src={`${window.location.origin}/Sne17/characters/${img}`}
+          src={`${window.location.origin}/characters/${img}`}
           alt=""
         />
         <p className="body-text">

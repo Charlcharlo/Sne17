@@ -13,7 +13,7 @@ export default function SDGs() {
     return (
       <img
         key={`sdg-${i}`}
-        src={`${window.location.origin}/Sne17/sdg-icons/E-WEB-Goal-${num}.png`}
+        src={`${window.location.origin}/sdg-icons/E-WEB-Goal-${num}.png`}
         className="sdg-icon"
         alt={goal}
       />
@@ -28,12 +28,12 @@ export default function SDGs() {
       </div>
       <img
         className="sdg-title-img"
-        src={`${window.location.origin}/Sne17/sdg-icons/E_SDG_logo_horizontal.png`}
+        src={`${window.location.origin}/sdg-icons/E_SDG_logo_horizontal.png`}
       />
       <div className="row-center-flex sdg-container">
         {goals.map(mapIcons)}
         <img
-          src={`${window.location.origin}/Sne17/sdg-icons/sdg-wheel.png`}
+          src={`${window.location.origin}/sdg-icons/sdg-wheel.png`}
           className="sdg-icon"
           alt="SDG Wheel"
         />

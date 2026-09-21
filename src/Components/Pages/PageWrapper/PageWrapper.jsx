@@ -11,9 +11,9 @@ export default function PageWrapper({ id, firstPageRef, info, index }) {
   const flex = useFlex();
   const lang = useLang();
   const srcDynamic = flex
-    ? `${window.location.origin}/Sne17/final-pages-${lang}/full-mobi/${info.src}`
-    : `${window.location.origin}/Sne17/final-pages-${lang}/full/${info.src}`;
-  const srcFixed = `${window.location.origin}/Sne17/final-pages-${lang}/full/${info.src}`;
+    ? `${window.location.origin}/final-pages-${lang}/full-mobi/${info.src}`
+    : `${window.location.origin}/final-pages-${lang}/full/${info.src}`;
+  const srcFixed = `${window.location.origin}/final-pages-${lang}/full/${info.src}`;
   return (
     <section
       className="page-wrapper centered-container"

@@ -6,7 +6,7 @@ export default function PageNavigation() {
   const offset = useOffset();
   const setOffset = useSetOffset();
   const pages = useBook();
-  const URI_PREFIX = `${window.location.origin}/Sne17/final-pages-eng/preview`;
+  const URI_PREFIX = `${window.location.origin}/final-pages-eng/preview`;
 
   function goPageOne() {
     setOffset(0);

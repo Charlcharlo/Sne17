@@ -5,7 +5,7 @@ export default function Preface() {
     <div className="preface full-comic-page centered-container">
       <img
         className="preface-bg"
-        src={`${window.location.origin}/Sne17/final-pages-eng/full/preface/bg.jpg`}
+        src={`${window.location.origin}/final-pages-eng/full/preface/bg.jpg`}
       />
       <div className="row-end">
         <div>
@@ -21,12 +21,12 @@ export default function Preface() {
           <div className="quote-container">
             <img
               className="preface-sig"
-              src={`${window.location.origin}/Sne17/final-pages-eng/full/preface/krs-sig.png`}
+              src={`${window.location.origin}/final-pages-eng/full/preface/krs-sig.png`}
             />
           </div>
         </div>
         <img
-          src={`${window.location.origin}/Sne17/final-pages-eng/full/preface/krs1.png`}
+          src={`${window.location.origin}/final-pages-eng/full/preface/krs1.png`}
           alt=""
           className="face-img"
         />

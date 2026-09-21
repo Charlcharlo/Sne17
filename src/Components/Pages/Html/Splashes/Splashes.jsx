@@ -6,14 +6,14 @@ export default function Splashes() {
     <>
       <img
         className="splash-top"
-        src={`${window.location.origin}/Sne17/characters/${
+        src={`${window.location.origin}/characters/${
           flex ? "splash-top-mobi" : "splash-top"
         }.png`}
         alt=""
       />
       <img
         className="splash-bottom"
-        src={`${window.location.origin}/Sne17/characters/${
+        src={`${window.location.origin}/characters/${
           flex ? "splash-bottom-mobi" : "splash-bottom"
         }.png`}
         alt=""

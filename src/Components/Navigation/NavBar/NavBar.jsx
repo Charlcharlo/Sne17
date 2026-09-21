@@ -56,7 +56,7 @@ export default function NavBar() {
         <button className="invisibutton nav-bar-btn" onClick={scrollTop}>
           <img
             className="nav-title-img"
-            src={`${window.location.origin}/Sne17/Images/${
+            src={`${window.location.origin}/Images/${
               flex ? "nav-title-mobi" : "nav-title"
             }.png`}
             alt=""

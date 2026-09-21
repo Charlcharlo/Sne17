@@ -22,7 +22,7 @@ export default function SliderContent({
   const flex = useFlex();
   const lang = useLang();
   const source = `${page}/panel-${currentPanel + 1}.png`;
-  const pageSource = `${window.location.origin}/Sne17/final-pages-${lang}/${
+  const pageSource = `${window.location.origin}/final-pages-${lang}/${
     flex ? "panels-mobi" : "panels"
   }/${source}`;
   const [loading, setLoading] = useState(true);

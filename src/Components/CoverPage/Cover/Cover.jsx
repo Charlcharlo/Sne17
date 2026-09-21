@@ -19,9 +19,7 @@ export default function Cover({ coverRef }) {
         <img
           className={`title-image ${langSelected && "large"}`}
           src={`${window.location.origin}${
-            flex
-              ? "/Sne17/Images/Sne-title-mobi.png"
-              : "/Sne17/Images/Sne-title.png"
+            flex ? "/Images/Sne-title-mobi.png" : "/Images/Sne-title.png"
           }`}
           alt=""
         />

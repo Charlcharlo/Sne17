@@ -10,10 +10,7 @@ export default function Editor() {
       <h2 className="title-smaller">{title}</h2>
       <p className="body-text">{text}</p>
       <div className="sig-container">
-        <img
-          src={`${window.location.origin}/Sne17/characters/marc-sig.png`}
-          alt=""
-        />
+        <img src={`${window.location.origin}/characters/marc-sig.png`} alt="" />
       </div>
     </div>
   );
